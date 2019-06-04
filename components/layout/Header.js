@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 import LogoImg from '../../assets/img/logo.png'
-import LogoImg2 from '../../assets/img/logo2.png'
+import LogoImg2 from '../../assets/img/logo.png'
 import CheckLogin from './CheckLogin'
 import { Divider } from 'antd'
 import { connect } from 'react-redux'
@@ -14,7 +14,7 @@ const Bar = styled.div`
    background: transparent;
    position: fixed;
    top: 0;
-   color: #fff;
+   color: #6abb03;
    height: 50px;
    padding-top: 8px;
    padding-left: 10px;
@@ -26,7 +26,7 @@ const Bar = styled.div`
    }
    &.light {
       background: transparent;
-      color: #000;
+      color: #6abb03;
    }
 `
 
@@ -57,7 +57,7 @@ const LoginBoxUl = styled.ul`
   }
 `
 
-const naviList = []
+const naviList = ['Record']
 
 class Header extends React.Component {
 

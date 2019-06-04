@@ -10,7 +10,7 @@ const ReBody = styled.div`
 `
 
 const ReContainer = styled.div`
-    min-height: 97vh;
+    min-height: 90vh;
     background: #fff;
 `
 

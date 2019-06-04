@@ -53,6 +53,9 @@ export const GlobalStyle = createGlobalStyle`
     -o-animation:      RED-FADE 1s ;
     animation:         RED-FADE 1s ;
   }
+  table th:last-child {
+    text-align: center;
+  }
   .ant-form-item-label {
     text-align: left;
   }

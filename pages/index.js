@@ -1,19 +1,18 @@
 import React from 'react'
 import Layout from '../components/layout/Layout'
 import styled from 'styled-components'
-import bannerBg from '../assets/img/home_bg.jpg'
 import Head from 'next/head'
-
 import * as css from '../common/css/style.css'
+import Calendar from '../components/code/Calendar'
+
 
 const Body = styled.div`
    background: #ebeef0;
 `
 
 const Container = styled.div`
-    height: 500px;
-    background:url(${bannerBg}) no-repeat 100% 100%;
-    background-size: 1920px;
+    min-height: 93vh;
+    padding-top: 50px;
     .title {
         padding-top: 180px;
         width: 1000px;
@@ -74,7 +73,7 @@ class Index extends React.Component {
           </Head>
           <Body>
             <Container>
-
+              <Calendar />
             </Container>
           </Body>
         </Layout>

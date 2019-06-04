@@ -10,6 +10,9 @@ const RegisterBody = styled.div`
    padding-top: 200px;
    width: 400px;
    margin: 0 auto;
+   .ant-btn-primary {
+      background: #6abb03;
+   }
 `
 
 class Register extends React.Component {
