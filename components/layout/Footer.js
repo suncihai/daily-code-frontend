@@ -11,7 +11,7 @@ const Bar = styled.div`
 const Footer = () => (
   <div>
     <Bar>
-      Copyright 2017-2019 © code , All Rights Reserved
+      Copyright 2019 © code , All Rights Reserved
     </Bar>
   </div>
 )

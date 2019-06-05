@@ -8,7 +8,6 @@ import Router from 'next/router'
 import Cookies from 'js-cookie'
 
 const LoginBody = styled.div`
-   min-height: 93vh;
    padding-top: 200px;
    width: 400px;
    margin: 0 auto;
@@ -49,7 +48,7 @@ class Login extends React.Component {
           this.setState({loading: false})
           message.success(`Welcomse back ${params.username}!`)
           Cookies.set('testUserName', params.username, {expires:1})
-          Router.replace('/user')
+          Router.replace('/')
         },800)
      } else if (ret.cde === -7){
          setTimeout(()=>{

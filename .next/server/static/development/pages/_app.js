@@ -343,14 +343,13 @@ function (_App) {
 /*!******************!*\
   !*** ./store.js ***!
   \******************/
-/*! exports provided: actionTypes, reducer, getCoinPrice, login, logout, initializeStore */
+/*! exports provided: actionTypes, reducer, login, logout, initializeStore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionTypes", function() { return actionTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCoinPrice", function() { return getCoinPrice; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initializeStore", function() { return initializeStore; });
@@ -361,8 +360,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var InitialState = {
-  partners: {},
-  coins: {},
   user: null
 };
 var actionTypes = {
@@ -376,11 +373,6 @@ var reducer = function reducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case actionTypes.GETCOINPRICE:
-      return Object.assign({}, state, {
-        coins: action.payload
-      });
-
     case actionTypes.LOGIN:
       return Object.assign({}, state, {
         user: action.payload
@@ -396,12 +388,6 @@ var reducer = function reducer() {
   }
 }; // ACTIONS
 
-var getCoinPrice = function getCoinPrice(data) {
-  return {
-    type: actionTypes.GETCOINPRICE,
-    payload: data
-  };
-};
 var login = function login(data) {
   return {
     type: actionTypes.LOGIN,

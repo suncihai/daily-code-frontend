@@ -71,12 +71,37 @@ const DateTd = styled.div`
 class CalendarWrap extends React.Component {
    state = {
       loading: false,
-      testArr1:[0,1,1,0,0,1,0,3,0,2,1,0,2,1,2,1,0,3,0,1,0,2,1,0,0,0,2,1,0,1,0],
-      testArr2:[1,0,0,0,0,1,0,1,0,2,1,0,1,1,0,1,0,3,0,1,0,2,1,0,1,0,2,0,0,1,0],
-      testArr3:[3,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+      prevRecord:[],
+      lastRecord:[],
+      currRecord:[],
    }
 
    componentDidMount() {
+     this.getRecords()
+   }
+
+   getRecords = async () => {
+      const timestamp = new Date().getTime();
+
+      const params = {
+         username: 'suncihai@gmail.com'
+      }
+
+      const ret = await axiosClient({
+        method: 'GET',
+        url: '/api/get_record',
+        params,
+      })
+
+      if (ret.code === 0) {
+         this.setState({
+            prevRecord: ret.data.previousMonthRecord,
+            lastRecord: ret.data.lastMonthRecord,
+            currRecord: ret.data.currentMonthRecord,
+         },()=>{
+            
+         })
+      } 
 
    }
 
@@ -84,19 +109,20 @@ class CalendarWrap extends React.Component {
      let date = value.date()
      let cell
      if(month - value.month() == 1) {
-       cell = {count: arr[date-1]}
+       if(arr[date-1]) {
+          cell = {count: arr[date-1].length}
+       }
      }
      return cell
    }
 
    dateFullCellRender = (value, arr, month) => {
       const cell = this.getListData(value, arr, month)
-      
       if(cell) {
          let cellStyle = cx({
-            'case1': cell.count === 1,
-            'case2': cell.count === 2,
-            'case3': cell.count === 3,
+            'case1': cell.count >= 1 && cell.count <= 2,
+            'case2': cell.count >= 3 && cell.count <= 4,
+            'case3': cell.count >= 5,
          })
          let text
          if(cell.count === 0) {
@@ -126,7 +152,7 @@ class CalendarWrap extends React.Component {
                <CalendarRow>
                   <CalendarBox>
                      <Calendar 
-                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.testArr1,moment().subtract(2, 'months').startOf('month').format('M'))} 
+                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.prevRecord,moment().subtract(2, 'months').startOf('month').format('M'))} 
                         value={moment().subtract(2, 'months').startOf('month')} 
                         fullscreen={false} 
                         headerRender={() => {
@@ -139,7 +165,7 @@ class CalendarWrap extends React.Component {
                   </CalendarBox>
                   <CalendarBox>
                      <Calendar 
-                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.testArr2,moment().subtract(1, 'months').startOf('month').format('M'))} 
+                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.lastRecord,moment().subtract(1, 'months').startOf('month').format('M'))} 
                         value={moment().subtract(1, 'months').startOf('month')}
                         fullscreen={false} 
                         headerRender={() => {
@@ -152,7 +178,7 @@ class CalendarWrap extends React.Component {
                   </CalendarBox>
                   <CalendarBox>
                      <Calendar
-                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.testArr3,moment().subtract(0, 'months').startOf('month').format('M'))}  
+                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.currRecord,moment().subtract(0, 'months').startOf('month').format('M'))}  
                         fullscreen={false} 
                         headerRender={() => {
                         return (

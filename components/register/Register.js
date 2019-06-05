@@ -6,7 +6,6 @@ import { Button, Form, Input, message, Spin } from 'antd'
 import { MD5 } from 'crypto-js'
 
 const RegisterBody = styled.div`
-   min-height: 93vh;
    padding-top: 200px;
    width: 400px;
    margin: 0 auto;
@@ -45,7 +44,7 @@ class Register extends React.Component {
      if (ret.code === 0) {
         setTimeout(()=>{
           this.setState({loading: false})
-          message.success(`You Add ${params.name}!`)
+          message.success(`You Add ${params.username}!`)
         },800)
      } else {
          setTimeout(()=>{

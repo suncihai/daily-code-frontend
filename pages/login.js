@@ -10,7 +10,7 @@ const LoBody = styled.div`
 `
 
 const LoContainer = styled.div`
-    min-height: 93vh;
+    min-height: 90vh;
     background: #fff;
 `
 

@@ -2,8 +2,6 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 const InitialState = {
-  partners: {},
-  coins: {},
   user: null,
 }
 
@@ -16,10 +14,6 @@ export const actionTypes = {
 // REDUCERS
 export const reducer = (state = InitialState, action) => {
   switch (action.type) {
-    case actionTypes.GETCOINPRICE:
-      return Object.assign({}, state, {
-        coins: action.payload
-      })
     case actionTypes.LOGIN:
       return Object.assign({}, state, {
         user: action.payload
@@ -34,10 +28,6 @@ export const reducer = (state = InitialState, action) => {
 }
 
 // ACTIONS
-export const getCoinPrice = (data) => {
-  return { type: actionTypes.GETCOINPRICE, payload: data }
-}
-
 export const login = (data) => {
   return { type: actionTypes.LOGIN, payload: data }
 }

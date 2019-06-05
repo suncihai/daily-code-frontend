@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -395,15 +395,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_tooltip_style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd_lib_tooltip_style_css__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var antd_lib_tooltip__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! antd/lib/tooltip */ "antd/lib/tooltip");
 /* harmony import */ var antd_lib_tooltip__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_tooltip__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _common_js_axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../common/js/axios */ "./common/js/axios.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! classname */ "classname");
-/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _common_js_axios__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../common/js/axios */ "./common/js/axios.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! classname */ "classname");
+/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_11__);
+
 
 
 
@@ -412,6 +415,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -436,19 +443,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Body = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div.withConfig({
+var Body = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Calendar__Body",
   componentId: "sc-1mq0gob-0"
 })(["min-height:87vh;padding-top:200px;margin:0 auto;"]);
-var CalendarRow = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div.withConfig({
+var CalendarRow = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Calendar__CalendarRow",
   componentId: "sc-1mq0gob-1"
 })(["display:flex;justify-content:space-around;width:1200px;margin:0 auto;"]);
-var CalendarBox = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div.withConfig({
+var CalendarBox = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Calendar__CalendarBox",
   componentId: "sc-1mq0gob-2"
 })(["display:inline-block;width:350px;border:1px solid #d9d9d9;border-radius:4px;.ant-fullcalendar-last-month-cell,.ant-fullcalendar-next-month-btn-day{color:#ccc;}.ant-fullcalendar-selected-day .ant-fullcalendar-value{background:transparent;color:rgba(0,0,0,0.65);box-shadow:none;}.ant-fullcalendar-today .ant-fullcalendar-value{box-shadow:none;}.month{padding:10px;text-align:center;}table{tr{td{.case1{border-radius:5px;background:#cce28c;}.case2{border-radius:5px;background:#287d20;color:#fff;}.case3{border-radius:5px;background:#134f0d;color:#fff;}}}}"]);
-var DateTd = styled_components__WEBPACK_IMPORTED_MODULE_8___default.a.div.withConfig({
+var DateTd = styled_components__WEBPACK_IMPORTED_MODULE_9___default.a.div.withConfig({
   displayName: "Calendar__DateTd",
   componentId: "sc-1mq0gob-3"
 })(["text-align:center;padding:10px;cursor:pointer;"]);
@@ -473,19 +480,61 @@ function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "state", {
       loading: false,
-      testArr1: [0, 1, 1, 0, 0, 1, 0, 3, 0, 2, 1, 0, 2, 1, 2, 1, 0, 3, 0, 1, 0, 2, 1, 0, 0, 0, 2, 1, 0, 1, 0],
-      testArr2: [1, 0, 0, 0, 0, 1, 0, 1, 0, 2, 1, 0, 1, 1, 0, 1, 0, 3, 0, 1, 0, 2, 1, 0, 1, 0, 2, 0, 0, 1, 0],
-      testArr3: [3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      prevRecord: [],
+      lastRecord: [],
+      currRecord: []
     });
+
+    _defineProperty(_assertThisInitialized(_this), "getRecords",
+    /*#__PURE__*/
+    _asyncToGenerator(
+    /*#__PURE__*/
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
+      var timestamp, params, ret;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              timestamp = new Date().getTime();
+              params = {
+                username: 'suncihai@gmail.com'
+              };
+              _context.next = 4;
+              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_8__["axiosClient"])({
+                method: 'GET',
+                url: '/api/get_record',
+                params: params
+              });
+
+            case 4:
+              ret = _context.sent;
+
+              if (ret.code === 0) {
+                _this.setState({
+                  prevRecord: ret.data.previousMonthRecord,
+                  lastRecord: ret.data.lastMonthRecord,
+                  currRecord: ret.data.currentMonthRecord
+                }, function () {});
+              }
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    })));
 
     _defineProperty(_assertThisInitialized(_this), "getListData", function (value, arr, month) {
       var date = value.date();
       var cell;
 
       if (month - value.month() == 1) {
-        cell = {
-          count: arr[date - 1]
-        };
+        if (arr[date - 1]) {
+          cell = {
+            count: arr[date - 1].length
+          };
+        }
       }
 
       return cell;
@@ -495,10 +544,10 @@ function (_React$Component) {
       var cell = _this.getListData(value, arr, month);
 
       if (cell) {
-        var cellStyle = classname__WEBPACK_IMPORTED_MODULE_10___default()({
-          'case1': cell.count === 1,
-          'case2': cell.count === 2,
-          'case3': cell.count === 3
+        var cellStyle = classname__WEBPACK_IMPORTED_MODULE_11___default()({
+          'case1': cell.count >= 1 && cell.count <= 2,
+          'case2': cell.count >= 3 && cell.count <= 4,
+          'case3': cell.count >= 5
         });
         var text;
 
@@ -508,13 +557,13 @@ function (_React$Component) {
           text = "\u4F60\u8FD9\u5929\u5237\u4E86".concat(cell.count, "\u9898\uFF01");
         }
 
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(antd_lib_tooltip__WEBPACK_IMPORTED_MODULE_5___default.a, {
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_tooltip__WEBPACK_IMPORTED_MODULE_5___default.a, {
           title: text
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(DateTd, {
+        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DateTd, {
           className: cellStyle
         }, value.date()));
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(DateTd, null, value.date());
+        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DateTd, null, value.date());
       }
     });
 
@@ -523,53 +572,55 @@ function (_React$Component) {
 
   _createClass(CalendarWrap, [{
     key: "componentDidMount",
-    value: function componentDidMount() {}
+    value: function componentDidMount() {
+      this.getRecords();
+    }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
       var loading = this.state.loading;
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Body, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(antd_lib_spin__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(Body, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_spin__WEBPACK_IMPORTED_MODULE_1___default.a, {
         spinning: loading
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(CalendarRow, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CalendarRow, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
         dateFullCellRender: function dateFullCellRender(value) {
-          return _this2.dateFullCellRender(value, _this2.state.testArr1, moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(2, 'months').startOf('month').format('M'));
+          return _this2.dateFullCellRender(value, _this2.state.prevRecord, moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(2, 'months').startOf('month').format('M'));
         },
-        value: moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(2, 'months').startOf('month'),
+        value: moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(2, 'months').startOf('month'),
         fullscreen: false,
         headerRender: function headerRender() {
-          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
             className: "month"
-          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(2, 'months').startOf('month').format('MMM')));
+          }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(2, 'months').startOf('month').format('MMM')));
         }
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
         dateFullCellRender: function dateFullCellRender(value) {
-          return _this2.dateFullCellRender(value, _this2.state.testArr2, moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(1, 'months').startOf('month').format('M'));
+          return _this2.dateFullCellRender(value, _this2.state.lastRecord, moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(1, 'months').startOf('month').format('M'));
         },
-        value: moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(1, 'months').startOf('month'),
+        value: moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(1, 'months').startOf('month'),
         fullscreen: false,
         headerRender: function headerRender() {
-          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
             className: "month"
-          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(1, 'months').startOf('month').format('MMM')));
+          }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(1, 'months').startOf('month').format('MMM')));
         }
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
         dateFullCellRender: function dateFullCellRender(value) {
-          return _this2.dateFullCellRender(value, _this2.state.testArr3, moment__WEBPACK_IMPORTED_MODULE_9___default()().subtract(0, 'months').startOf('month').format('M'));
+          return _this2.dateFullCellRender(value, _this2.state.currRecord, moment__WEBPACK_IMPORTED_MODULE_10___default()().subtract(0, 'months').startOf('month').format('M'));
         },
         fullscreen: false,
         headerRender: function headerRender() {
-          return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
             className: "month"
-          }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_9___default()().format("MMM")));
+          }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_10___default()().format("MMM")));
         }
       })))));
     }
   }]);
 
   return CalendarWrap;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (CalendarWrap);
 
@@ -670,7 +721,7 @@ var Bar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfi
 })(["background:#6abb03;height:65px;line-height:65px;color:#fff;text-align:center;"]);
 
 var Footer = function Footer() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Bar, null, "Copyright 2017-2019 \xA9 code , All Rights Reserved"));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Bar, null, "Copyright 2019 \xA9 code , All Rights Reserved"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
@@ -1009,14 +1060,13 @@ function (_React$Component) {
 /*!******************!*\
   !*** ./store.js ***!
   \******************/
-/*! exports provided: actionTypes, reducer, getCoinPrice, login, logout, initializeStore */
+/*! exports provided: actionTypes, reducer, login, logout, initializeStore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionTypes", function() { return actionTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCoinPrice", function() { return getCoinPrice; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initializeStore", function() { return initializeStore; });
@@ -1027,8 +1077,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var InitialState = {
-  partners: {},
-  coins: {},
   user: null
 };
 var actionTypes = {
@@ -1042,11 +1090,6 @@ var reducer = function reducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case actionTypes.GETCOINPRICE:
-      return Object.assign({}, state, {
-        coins: action.payload
-      });
-
     case actionTypes.LOGIN:
       return Object.assign({}, state, {
         user: action.payload
@@ -1062,12 +1105,6 @@ var reducer = function reducer() {
   }
 }; // ACTIONS
 
-var getCoinPrice = function getCoinPrice(data) {
-  return {
-    type: actionTypes.GETCOINPRICE,
-    payload: data
-  };
-};
 var login = function login(data) {
   return {
     type: actionTypes.LOGIN,
@@ -1086,7 +1123,7 @@ function initializeStore() {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -1095,6 +1132,17 @@ function initializeStore() {
 
 module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "@babel/runtime/regenerator":
+/*!*********************************************!*\
+  !*** external "@babel/runtime/regenerator" ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
 
