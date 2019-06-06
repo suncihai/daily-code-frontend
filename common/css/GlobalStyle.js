@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { themeColor } from './constant'
 
 export const GlobalStyle = createGlobalStyle`
   body,html,h1,h2,h3,h4,h5,p{
@@ -16,12 +17,12 @@ export const GlobalStyle = createGlobalStyle`
   table {
     th {
       &:last-child {
-         text-align: right;
+         text-align: center;
       }
     }
     td {
       &:last-child {
-        text-align: right;
+        text-align: center;
       }
     }
   }
@@ -35,68 +36,48 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'DIN-Bold';
     src: url('../../assets/iconfont/DIN/DIN-Bold.otf');
   }
-  .green {
-     color: #8bc34a;
+  .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: #cce28c;
   }
-  .red {
-     color: #f44336;
+  .ant-select-dropdown.ant-select-dropdown--multiple {
+    .ant-select-dropdown-menu-item-selected {
+      .ant-select-selected-icon {
+        color: ${themeColor};
+      }
+    }
   }
-  .tickGreen {
-    -webkit-animation: GREEN-FADE 1s ;
-    -moz-animation:    GREEN-FADE 1s ;
-    -o-animation:      GREEN-FADE 1s ;
-    animation:         GREEN-FADE 1s ;
+  .ant-select-selection__choice__remove {
+    .anticon {
+      color: #fff;
+    }
   }
-  .tickRed {
-    -webkit-animation: RED-FADE 1s ;
-    -moz-animation:    RED-FADE 1s ;
-    -o-animation:      RED-FADE 1s ;
-    animation:         RED-FADE 1s ;
+  .ant-select-selection--multiple {
+    .ant-select-selection__choice {
+      background-color: ${themeColor};
+      color: #fff;
+    }
   }
-  table th:last-child {
-    text-align: center;
+  .ant-spin-dot-item {
+    background-color: ${themeColor};
   }
-  .ant-form-item-label {
-    text-align: left;
+  .ant-btn {
+    color: ${themeColor};
+    border-color: ${themeColor};
+    &:hover, &:focus {
+      color: ${themeColor};
+      border-color: ${themeColor};
+      opacity: 0.7;
+    }
   }
-  @-webkit-keyframes GREEN-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @-moz-keyframes GREEN-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @-o-keyframes GREEN-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @keyframes GREEN-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @-webkit-keyframes RED-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @-moz-keyframes RED-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @-o-keyframes RED-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
-  }
-  @keyframes RED-FADE {
-    0%   { opacity: 1; }
-    50%  { opacity: 0;}
-    100% { opacity: 1; }
+  .ant-btn-primary {
+    color: #fff;
+    background-color: ${themeColor};
+    border-color: ${themeColor};
+    &:hover, &:focus {
+      color: #fff;
+      background-color: ${themeColor};
+      border-color: ${themeColor};
+      opacity: 0.7;
+    }
   }
 `

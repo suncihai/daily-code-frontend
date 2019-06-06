@@ -15,6 +15,18 @@ const getRecord = (req, res) => {
     .catch(errorResponse(req, res))
 }
 
+const submitRecord = (req, res) => {
+  axiosServer({
+      method: 'GET',
+      url: `http://localhost:8080/submit_records`,
+      params: req.body,
+      headers: req.headers,
+    })
+    .then(responseWrap(req, res))
+    .catch(errorResponse(req, res))
+}
+
 module.exports = {
   getRecord,
+  submitRecord
 }

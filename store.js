@@ -3,10 +3,17 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 const InitialState = {
   user: null,
+  records: {
+              prevMonthRecord: [],
+              lastMonthRecord: [],
+              currMonthRecord: [],
+           },
+  problems: [],
 }
 
 export const actionTypes = {
-  GETCOINPRICE: 'GETCOINPRICE',
+  GETRECORDS: 'GETRECORDS',
+  GETPROBLEMS: 'GETPROBLEMS',
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT',
 }
@@ -14,6 +21,14 @@ export const actionTypes = {
 // REDUCERS
 export const reducer = (state = InitialState, action) => {
   switch (action.type) {
+    case actionTypes.GETRECORDS:
+      return Object.assign({}, state, {
+        records: action.payload
+      })
+    case actionTypes.GETPROBLEMS:
+      return Object.assign({}, state, {
+        problems: action.payload
+      })
     case actionTypes.LOGIN:
       return Object.assign({}, state, {
         user: action.payload
@@ -28,6 +43,14 @@ export const reducer = (state = InitialState, action) => {
 }
 
 // ACTIONS
+export const getRecords = (data) => {
+  return { type: actionTypes.GETRECORDS, payload: data }
+}
+
+export const getProblems = (data) => {
+  return { type: actionTypes.GETPROBLEMS, payload: data }
+}
+
 export const login = (data) => {
   return { type: actionTypes.LOGIN, payload: data }
 }

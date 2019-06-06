@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 import { axiosClient } from '../../common/js/axios'
 import styled from 'styled-components'
 import { Calendar, Tooltip, Button, Form, Input, message, Spin } from 'antd'
+import { connect } from 'react-redux'
+import { getRecords } from '../../store'
 import moment from 'moment'
 import cx from 'classname'
+import AddRecord from './AddRecord'
 
 const Body = styled.div`
    min-height: 87vh;
@@ -71,16 +74,13 @@ const DateTd = styled.div`
 class CalendarWrap extends React.Component {
    state = {
       loading: false,
-      prevRecord:[],
-      lastRecord:[],
-      currRecord:[],
    }
 
    componentDidMount() {
-     this.getRecords()
+     this.fetchRecords()
    }
 
-   getRecords = async () => {
+   fetchRecords = async () => {
       const timestamp = new Date().getTime();
 
       const params = {
@@ -94,15 +94,8 @@ class CalendarWrap extends React.Component {
       })
 
       if (ret.code === 0) {
-         this.setState({
-            prevRecord: ret.data.previousMonthRecord,
-            lastRecord: ret.data.lastMonthRecord,
-            currRecord: ret.data.currentMonthRecord,
-         },()=>{
-            
-         })
+         this.props.getRecords(ret.data)
       } 
-
    }
 
    getListData = (value, arr, month) => {
@@ -127,8 +120,10 @@ class CalendarWrap extends React.Component {
          let text
          if(cell.count === 0) {
            text = '你这天偷懒了！'
-         }else{
+         }else if(cell.count > 0 && cell.count < 5) {
            text = `你这天刷了${cell.count}题！`
+         }else {
+           text = `好棒！你这天刷了${cell.count}题！`
          }
 
          return (
@@ -145,6 +140,7 @@ class CalendarWrap extends React.Component {
    
    render() {
       const { loading } = this.state
+      const { records } = this.props
 
       return ( 
          <Body>
@@ -152,7 +148,7 @@ class CalendarWrap extends React.Component {
                <CalendarRow>
                   <CalendarBox>
                      <Calendar 
-                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.prevRecord,moment().subtract(2, 'months').startOf('month').format('M'))} 
+                        dateFullCellRender={(value)=>this.dateFullCellRender(value,records.prevMonthRecord,moment().subtract(2, 'months').startOf('month').format('M'))} 
                         value={moment().subtract(2, 'months').startOf('month')} 
                         fullscreen={false} 
                         headerRender={() => {
@@ -165,7 +161,7 @@ class CalendarWrap extends React.Component {
                   </CalendarBox>
                   <CalendarBox>
                      <Calendar 
-                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.lastRecord,moment().subtract(1, 'months').startOf('month').format('M'))} 
+                        dateFullCellRender={(value)=>this.dateFullCellRender(value,records.lastMonthRecord,moment().subtract(1, 'months').startOf('month').format('M'))} 
                         value={moment().subtract(1, 'months').startOf('month')}
                         fullscreen={false} 
                         headerRender={() => {
@@ -178,7 +174,7 @@ class CalendarWrap extends React.Component {
                   </CalendarBox>
                   <CalendarBox>
                      <Calendar
-                        dateFullCellRender={(value)=>this.dateFullCellRender(value,this.state.currRecord,moment().subtract(0, 'months').startOf('month').format('M'))}  
+                        dateFullCellRender={(value)=>this.dateFullCellRender(value,records.currMonthRecord,moment().subtract(0, 'months').startOf('month').format('M'))}  
                         fullscreen={false} 
                         headerRender={() => {
                         return (
@@ -190,9 +186,17 @@ class CalendarWrap extends React.Component {
                   </CalendarBox>
                </CalendarRow>
             </Spin>
+            <AddRecord updateRecords={this.fetchRecords}/>
          </Body>
       )
    }
 }
 
-export default CalendarWrap
+const mapDispatchToProps = { getRecords }
+const mapStateToProps = ({records}) => ({records})
+
+export default connect(
+   mapStateToProps,
+   mapDispatchToProps
+ )(CalendarWrap)
+

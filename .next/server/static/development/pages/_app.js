@@ -105,8 +105,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GlobalStyle", function() { return GlobalStyle; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constant */ "./common/css/constant.js");
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n  body,html,h1,h2,h3,h4,h5,p{\n    margin: 0;\n    padding: 0;\n  }\n  ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n  }\n  a {\n    text-decoration: none;\n  }\n  table {\n    th {\n      &:last-child {\n         text-align: right;\n      }\n    }\n    td {\n      &:last-child {\n        text-align: right;\n      }\n    }\n  }\n  @font-face {\n    font-display: auto;\n    font-family: 'DIN-Regular';\n    src: url('../../assets/iconfont/DIN/DIN-Regular.otf');\n  }\n  @font-face {\n    font-display: auto;\n    font-family: 'DIN-Bold';\n    src: url('../../assets/iconfont/DIN/DIN-Bold.otf');\n  }\n  .green {\n     color: #8bc34a;\n  }\n  .red {\n     color: #f44336;\n  }\n  .tickGreen {\n    -webkit-animation: GREEN-FADE 1s ;\n    -moz-animation:    GREEN-FADE 1s ;\n    -o-animation:      GREEN-FADE 1s ;\n    animation:         GREEN-FADE 1s ;\n  }\n  .tickRed {\n    -webkit-animation: RED-FADE 1s ;\n    -moz-animation:    RED-FADE 1s ;\n    -o-animation:      RED-FADE 1s ;\n    animation:         RED-FADE 1s ;\n  }\n  table th:last-child {\n    text-align: center;\n  }\n  .ant-form-item-label {\n    text-align: left;\n  }\n  @-webkit-keyframes GREEN-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @-moz-keyframes GREEN-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @-o-keyframes GREEN-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @keyframes GREEN-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @-webkit-keyframes RED-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @-moz-keyframes RED-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @-o-keyframes RED-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n  @keyframes RED-FADE {\n    0%   { opacity: 1; }\n    50%  { opacity: 0;}\n    100% { opacity: 1; }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  body,html,h1,h2,h3,h4,h5,p{\n    margin: 0;\n    padding: 0;\n  }\n  ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n  }\n  a {\n    text-decoration: none;\n  }\n  table {\n    th {\n      &:last-child {\n         text-align: center;\n      }\n    }\n    td {\n      &:last-child {\n        text-align: center;\n      }\n    }\n  }\n  @font-face {\n    font-display: auto;\n    font-family: 'DIN-Regular';\n    src: url('../../assets/iconfont/DIN/DIN-Regular.otf');\n  }\n  @font-face {\n    font-display: auto;\n    font-family: 'DIN-Bold';\n    src: url('../../assets/iconfont/DIN/DIN-Bold.otf');\n  }\n  .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {\n    background-color: #cce28c;\n  }\n  .ant-select-dropdown.ant-select-dropdown--multiple {\n    .ant-select-dropdown-menu-item-selected {\n      .ant-select-selected-icon {\n        color: ", ";\n      }\n    }\n  }\n  .ant-select-selection__choice__remove {\n    .anticon {\n      color: #fff;\n    }\n  }\n  .ant-select-selection--multiple {\n    .ant-select-selection__choice {\n      background-color: ", ";\n      color: #fff;\n    }\n  }\n  .ant-spin-dot-item {\n    background-color: ", ";\n  }\n  .ant-btn {\n    color: ", ";\n    border-color: ", ";\n    &:hover, &:focus {\n      color: ", ";\n      border-color: ", ";\n      opacity: 0.7;\n    }\n  }\n  .ant-btn-primary {\n    color: #fff;\n    background-color: ", ";\n    border-color: ", ";\n    &:hover, &:focus {\n      color: #fff;\n      background-color: ", ";\n      border-color: ", ";\n      opacity: 0.7;\n    }\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -118,7 +119,37 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 
-var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"])(_templateObject());
+
+var GlobalStyle = Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["createGlobalStyle"])(_templateObject(), _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"], _constant__WEBPACK_IMPORTED_MODULE_1__["themeColor"]);
+
+/***/ }),
+
+/***/ "./common/css/constant.js":
+/*!********************************!*\
+  !*** ./common/css/constant.js ***!
+  \********************************/
+/*! exports provided: headHeight, footerHeight, lineHeight, fontSize, themeColor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headHeight", function() { return headHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footerHeight", function() { return footerHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lineHeight", function() { return lineHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fontSize", function() { return fontSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "themeColor", function() { return themeColor; });
+/* 头部导航 */
+var headHeight = '50px';
+/* 底部 */
+
+var footerHeight = '50px';
+/* 统一 UI 样式 */
+
+var lineHeight = '1.5'; // 默认行高
+
+var fontSize = '14px'; // 默认字体大小
+
+var themeColor = '#6abb03'; // 默认主题颜色
 
 /***/ }),
 
@@ -284,6 +315,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _common_css_GlobalStyle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/css/GlobalStyle */ "./common/css/GlobalStyle.js");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next/head */ "next/head");
+/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_5__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -301,6 +334,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -326,7 +360,11 @@ function (_App) {
           Component = _this$props.Component,
           pageProps = _this$props.pageProps,
           reduxStore = _this$props.reduxStore;
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_0__["Container"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__["Provider"], {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_0__["Container"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_5___default.a, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("link", {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "../static/favicon.ico"
+      })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__["Provider"], {
         store: reduxStore
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, pageProps), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_common_css_GlobalStyle__WEBPACK_IMPORTED_MODULE_4__["GlobalStyle"], null)));
     }
@@ -343,13 +381,15 @@ function (_App) {
 /*!******************!*\
   !*** ./store.js ***!
   \******************/
-/*! exports provided: actionTypes, reducer, login, logout, initializeStore */
+/*! exports provided: actionTypes, reducer, getRecords, getProblems, login, logout, initializeStore */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "actionTypes", function() { return actionTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRecords", function() { return getRecords; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProblems", function() { return getProblems; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initializeStore", function() { return initializeStore; });
@@ -360,10 +400,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var InitialState = {
-  user: null
+  user: null,
+  records: {
+    prevMonthRecord: [],
+    lastMonthRecord: [],
+    currMonthRecord: []
+  },
+  problems: []
 };
 var actionTypes = {
-  GETCOINPRICE: 'GETCOINPRICE',
+  GETRECORDS: 'GETRECORDS',
+  GETPROBLEMS: 'GETPROBLEMS',
   LOGIN: 'LOGIN',
   LOGOUT: 'LOGOUT' // REDUCERS
 
@@ -373,6 +420,16 @@ var reducer = function reducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
+    case actionTypes.GETRECORDS:
+      return Object.assign({}, state, {
+        records: action.payload
+      });
+
+    case actionTypes.GETPROBLEMS:
+      return Object.assign({}, state, {
+        problems: action.payload
+      });
+
     case actionTypes.LOGIN:
       return Object.assign({}, state, {
         user: action.payload
@@ -388,6 +445,18 @@ var reducer = function reducer() {
   }
 }; // ACTIONS
 
+var getRecords = function getRecords(data) {
+  return {
+    type: actionTypes.GETRECORDS,
+    payload: data
+  };
+};
+var getProblems = function getProblems(data) {
+  return {
+    type: actionTypes.GETPROBLEMS,
+    payload: data
+  };
+};
 var login = function login(data) {
   return {
     type: actionTypes.LOGIN,
@@ -437,6 +506,17 @@ module.exports = require("@babel/runtime/regenerator");
 /***/ (function(module, exports) {
 
 module.exports = require("next/app");
+
+/***/ }),
+
+/***/ "next/head":
+/*!****************************!*\
+  !*** external "next/head" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
 
 /***/ }),
 

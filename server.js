@@ -10,7 +10,8 @@ const handle = app.getRequestHandler()
 
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const { getRecord } = require('./server/record.js')
+const { getRecord, submitRecord } = require('./server/record.js')
+const { getProblems } = require('./server/problems.js')
 const { register, login } = require('./server/user.js')
 
 if (process.env.NODE_ENV === 'dev') {
@@ -93,6 +94,8 @@ if (process.env.NODE_ENV === 'dev') {
   server.get('/api/register', register)
   server.get('/api/login', login)
   server.get('/api/get_record', getRecord)
+  server.get('/api/submit_record', submitRecord)
+  server.get('/api/get_problems', getProblems)
   
   server.get('*', (req, res) => {
     const parsedUrl = parse(req.url, true)
