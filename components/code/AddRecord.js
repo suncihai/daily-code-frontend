@@ -1,13 +1,14 @@
 
-import React, { Component } from 'react';
+import React, { Component, forwardRef } from 'react';
 import { axiosClient } from '../../common/js/axios'
 import styled from 'styled-components'
-import { Drawer, Tooltip, Button, Form, Input, Row, Col, Select, message, Spin } from 'antd'
+import { Drawer, Tooltip, Button, Form, Input, Switch, Row, Col, Select, message, Spin } from 'antd'
 import { connect } from 'react-redux'
 import { getRecords, getProblems } from '../../store'
 import iconGreen from '../../assets/img/submit_green.png'
 import iconWhite from '../../assets/img/submit_white.png'
 import moment from 'moment'
+import { themeColor } from '../../common/css/constant'
 import cx from 'classname'
 
 const Body = styled.div`
@@ -21,7 +22,7 @@ const Icon = styled.div`
    top: 20%;
    padding: 10px;
    border-radius: 40px;
-   border: 2px solid #6abb03;
+   border: 2px solid ${themeColor};
    cursor: pointer;
    transition: background 0.4s ease-in-out;
    .record-icon {
@@ -29,7 +30,7 @@ const Icon = styled.div`
       transition: all 0.4s ease-in-out;
    }
    &.hover-icon {
-     background: #6abb03;
+     background: ${themeColor};
    }
 `
 
@@ -40,6 +41,8 @@ class AddRecordWrap extends React.Component {
       loading: false,
       hover: false,
       visible: false,
+      disableSelect: false, 
+      switchCheck: true,
       selectedPro: '',
    }
 
@@ -76,7 +79,7 @@ class AddRecordWrap extends React.Component {
          username: 'suncihai@gmail.com',
          problems: this.state.selectedPro,
          timestamp,
-         success: true,
+         success: this.state.switchCheck,
       }
       const ret = await axiosClient({
         method: 'GET',
@@ -100,11 +103,24 @@ class AddRecordWrap extends React.Component {
     };
    
    onChange = (e) => {
-      this.setState({
-         selectedPro: this.filterProblems(e).join('-')
-      },()=>{
+      if(e.length<=4) {
+         this.setState({
+            switches: e.length,
+            disableSelect: false,
+            selectedPro: this.filterProblems(e).join('-')
+         },()=>{
+             
+         })
+      }else {
+         this.setState({
+            switches: e.length,
+            disableSelect: true
+         })
+      }
+   }
 
-      })
+   switchChange = (checked) => {
+      this.setState({switchCheck: checked})
    }
 
    filterProblems = (arr) => {
@@ -117,9 +133,8 @@ class AddRecordWrap extends React.Component {
       });
     };
    
-   
    render() {
-      const { loading, hover, visible } = this.state
+      const { loading, hover, visible, disableSelect, switchCheck } = this.state
       const icon = hover ? iconWhite : iconGreen
       const iconStyle = cx({
          'hover-icon': hover
@@ -151,24 +166,11 @@ class AddRecordWrap extends React.Component {
                               {getFieldDecorator('problem', {
                               rules: [{ required: true, message: 'Please select at lease one problem' }],
                               })(
-   
-                              <Select 
-                                 mode="multiple"
-                                 size="large"
-                                 onChange={this.onChange}
-                                 placeholder="Please select at lease one problem">
-                                 {
-                                    problems.map((item, index)=>{
-                                       let v = `${item.number}-${item.name}`
-                                       return (
-                                          <Option key={item.name} value={v}>
-                                             <span>{v}</span>
-                                          </Option>
-                                       )
-                                    })
-                                 }
-                              </Select>,
+                                 <SelectWrapper onChange={this.onChange} problems={problems} disableSelect={disableSelect}/>,
                               )}
+                           </Form.Item>
+                           <Form.Item label="Pass or Fail">
+                              <Switch defaultChecked onChange={this.switchChange} />
                            </Form.Item>
                         </Col>
                      </Spin>
@@ -198,6 +200,43 @@ class AddRecordWrap extends React.Component {
       )
    }
 }
+
+const SelectWrapper = forwardRef((props, ref) => {
+   if(!props.disableSelect) {
+      return (
+         <Select 
+            mode="multiple"
+            size="large"
+            onChange={props.onChange}
+            ref={ref}
+            placeholder="Please select at lease one problem">
+            {  
+               props.problems.map((item, index)=>{
+                  let v = `${item.number}-${item.name}`
+                  return (
+                     <Option key={item.name} value={v}>
+                        <span>{v}</span>
+                     </Option>
+                  )
+               })
+            }
+         </Select>
+      );
+   }else {
+      return (
+         <Select 
+            mode="multiple"
+            size="large"
+            ref={ref}
+            onChange={props.onChange}
+            placeholder="Please select at lease one problem">
+            <Option key="000" value="000" disabled>
+               <span>You may at least select five problems!</span>
+            </Option>
+         </Select>
+      )
+   }
+ })
 
 const mapDispatchToProps = { getRecords, getProblems }
 const mapStateToProps = ({problems}) => ({problems})

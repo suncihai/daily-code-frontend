@@ -6,13 +6,14 @@ import { Button, Form, Input, message, Spin } from 'antd'
 import { MD5 } from 'crypto-js'
 import Router from 'next/router'
 import Cookies from 'js-cookie'
+import { themeColor } from '../../common/css/constant'
 
 const LoginBody = styled.div`
    padding-top: 200px;
    width: 400px;
    margin: 0 auto;
    .ant-btn-primary {
-      background: #6abb03;
+      background: ${themeColor};
    }
 `
 

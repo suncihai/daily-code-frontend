@@ -4,13 +4,14 @@ import { axiosClient } from '../../common/js/axios'
 import styled from 'styled-components'
 import { Button, Form, Input, message, Spin } from 'antd'
 import { MD5 } from 'crypto-js'
+import { themeColor } from '../../common/css/constant'
 
 const RegisterBody = styled.div`
    padding-top: 200px;
    width: 400px;
    margin: 0 auto;
    .ant-btn-primary {
-      background: #6abb03;
+      background: ${themeColor};
    }
 `
 

@@ -99,6 +99,12 @@
       "name": null,
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 18,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
     }
   ],
   "./index.css": [
@@ -159,6 +165,12 @@
     {
       "id": "./node_modules/antd/lib/grid/style/index.css",
       "name": "./node_modules/antd/lib/grid/style/index.css",
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": "./node_modules/antd/lib/switch/style/index.css",
+      "name": "./node_modules/antd/lib/switch/style/index.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     },

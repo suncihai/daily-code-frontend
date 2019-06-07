@@ -80,4 +80,7 @@ export const GlobalStyle = createGlobalStyle`
       opacity: 0.7;
     }
   }
+  .ant-switch-checked {
+    background-color: ${themeColor};
+  }
 `

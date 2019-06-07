@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { themeColor } from '../../common/css/constant'
 
 const Bar = styled.div`
-   background: #6abb03;
+   background: ${themeColor};
    height: 65px;
    line-height: 65px;
    color: #fff;

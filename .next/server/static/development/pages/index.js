@@ -126,6 +126,35 @@ module.exports = "/_next/static/files/submit_white_2eaafef9fe06c08d55c62336df441
 
 /***/ }),
 
+/***/ "./common/css/constant.js":
+/*!********************************!*\
+  !*** ./common/css/constant.js ***!
+  \********************************/
+/*! exports provided: headHeight, footerHeight, lineHeight, fontSize, themeColor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "headHeight", function() { return headHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "footerHeight", function() { return footerHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "lineHeight", function() { return lineHeight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fontSize", function() { return fontSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "themeColor", function() { return themeColor; });
+/* 头部导航 */
+var headHeight = '50px';
+/* 底部 */
+
+var footerHeight = '50px';
+/* 统一 UI 样式 */
+
+var lineHeight = '1.5'; // 默认行高
+
+var fontSize = '14px'; // 默认字体大小
+
+var themeColor = '#6abb03'; // 默认主题颜色
+
+/***/ }),
+
 /***/ "./common/css/style.css":
 /*!******************************!*\
   !*** ./common/css/style.css ***!
@@ -425,36 +454,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd/lib/col */ "antd/lib/col");
 /* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd/lib/form/style/css */ "antd/lib/form/style/css");
-/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd/lib/form */ "antd/lib/form");
-/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd/lib/message/style/css */ "antd/lib/message/style/css");
-/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd/lib/message */ "antd/lib/message");
-/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd/lib/select/style/css */ "antd/lib/select/style/css");
-/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! antd/lib/select */ "antd/lib/select");
-/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var _common_js_axios__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../common/js/axios */ "./common/js/axios.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_20__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../store */ "./store.js");
-/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../assets/img/submit_green.png */ "./assets/img/submit_green.png");
-/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../assets/img/submit_white.png */ "./assets/img/submit_white.png");
-/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! classname */ "classname");
-/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd/lib/switch/style/css */ "antd/lib/switch/style/css");
+/* harmony import */ var antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var antd_lib_switch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd/lib/switch */ "antd/lib/switch");
+/* harmony import */ var antd_lib_switch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(antd_lib_switch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd/lib/form/style/css */ "antd/lib/form/style/css");
+/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd/lib/form */ "antd/lib/form");
+/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd/lib/message/style/css */ "antd/lib/message/style/css");
+/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd/lib/message */ "antd/lib/message");
+/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! antd/lib/select/style/css */ "antd/lib/select/style/css");
+/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! antd/lib/select */ "antd/lib/select");
+/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var _common_js_axios__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../common/js/axios */ "./common/js/axios.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../store */ "./store.js");
+/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../assets/img/submit_green.png */ "./assets/img/submit_green.png");
+/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../assets/img/submit_white.png */ "./assets/img/submit_white.png");
+/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _common_css_constant__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../common/css/constant */ "./common/css/constant.js");
+/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! classname */ "classname");
+/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_28__);
+
+
 
 
 
@@ -506,15 +542,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Body = styled_components__WEBPACK_IMPORTED_MODULE_19___default.a.div.withConfig({
+
+var Body = styled_components__WEBPACK_IMPORTED_MODULE_21___default.a.div.withConfig({
   displayName: "AddRecord__Body",
   componentId: "sc-1hr4qll-0"
 })([""]);
-var Icon = styled_components__WEBPACK_IMPORTED_MODULE_19___default.a.div.withConfig({
+var Icon = styled_components__WEBPACK_IMPORTED_MODULE_21___default.a.div.withConfig({
   displayName: "AddRecord__Icon",
   componentId: "sc-1hr4qll-1"
-})(["position:fixed;right:25px;transform:translateY(-80%);top:20%;padding:10px;border-radius:40px;border:2px solid #6abb03;cursor:pointer;transition:background 0.4s ease-in-out;.record-icon{width:30px;transition:all 0.4s ease-in-out;}&.hover-icon{background:#6abb03;}"]);
-var Option = antd_lib_select__WEBPACK_IMPORTED_MODULE_16___default.a.Option;
+})(["position:fixed;right:25px;transform:translateY(-80%);top:20%;padding:10px;border-radius:40px;border:2px solid ", ";cursor:pointer;transition:background 0.4s ease-in-out;.record-icon{width:30px;transition:all 0.4s ease-in-out;}&.hover-icon{background:", ";}"], _common_css_constant__WEBPACK_IMPORTED_MODULE_27__["themeColor"], _common_css_constant__WEBPACK_IMPORTED_MODULE_27__["themeColor"]);
+var Option = antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default.a.Option;
 
 var AddRecordWrap =
 /*#__PURE__*/
@@ -538,6 +575,8 @@ function (_React$Component) {
       loading: false,
       hover: false,
       visible: false,
+      disableSelect: false,
+      switchCheck: true,
       selectedPro: ''
     });
 
@@ -545,14 +584,14 @@ function (_React$Component) {
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14___default.a.mark(function _callee() {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.mark(function _callee() {
       var ret;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14___default.a.wrap(function _callee$(_context) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_18__["axiosClient"])({
+              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_20__["axiosClient"])({
                 method: 'GET',
                 url: '/api/get_problems'
               });
@@ -576,9 +615,9 @@ function (_React$Component) {
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14___default.a.mark(function _callee2() {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.mark(function _callee2() {
       var timestamp, params, ret;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_14___default.a.wrap(function _callee2$(_context2) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
@@ -587,10 +626,10 @@ function (_React$Component) {
                 username: 'suncihai@gmail.com',
                 problems: _this.state.selectedPro,
                 timestamp: timestamp,
-                success: true
+                success: _this.state.switchCheck
               };
               _context2.next = 4;
-              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_18__["axiosClient"])({
+              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_20__["axiosClient"])({
                 method: 'GET',
                 url: '/api/submit_record',
                 params: params
@@ -606,7 +645,7 @@ function (_React$Component) {
                     visible: false
                   });
 
-                  antd_lib_message__WEBPACK_IMPORTED_MODULE_13___default.a.success('添加刷题记录成功！');
+                  antd_lib_message__WEBPACK_IMPORTED_MODULE_15___default.a.success('添加刷题记录成功！');
 
                   _this.props.updateRecords();
                 }, 1000);
@@ -627,9 +666,24 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "onChange", function (e) {
+      if (e.length <= 4) {
+        _this.setState({
+          switches: e.length,
+          disableSelect: false,
+          selectedPro: _this.filterProblems(e).join('-')
+        }, function () {});
+      } else {
+        _this.setState({
+          switches: e.length,
+          disableSelect: true
+        });
+      }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "switchChange", function (checked) {
       _this.setState({
-        selectedPro: _this.filterProblems(e).join('-')
-      }, function () {});
+        switchCheck: checked
+      });
     });
 
     _defineProperty(_assertThisInitialized(_this), "filterProblems", function (arr) {
@@ -676,16 +730,18 @@ function (_React$Component) {
       var _this$state = this.state,
           loading = _this$state.loading,
           hover = _this$state.hover,
-          visible = _this$state.visible;
-      var icon = hover ? _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_23___default.a : _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_22___default.a;
-      var iconStyle = classname__WEBPACK_IMPORTED_MODULE_25___default()({
+          visible = _this$state.visible,
+          disableSelect = _this$state.disableSelect,
+          switchCheck = _this$state.switchCheck;
+      var icon = hover ? _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25___default.a : _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24___default.a;
+      var iconStyle = classname__WEBPACK_IMPORTED_MODULE_28___default()({
         'hover-icon': hover
       });
       var getFieldDecorator = this.props.form.getFieldDecorator;
       var problems = this.props.problems;
-      return react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(Body, null, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(Icon, {
+      return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Body, null, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Icon, {
         className: iconStyle
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("img", {
         className: "record-icon",
         onMouseOver: function onMouseOver() {
           _this3.setState({
@@ -699,42 +755,40 @@ function (_React$Component) {
         },
         onClick: this.showDrawer,
         src: icon
-      })), react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_1___default.a, {
         title: "Create a new record",
         width: 450,
         onClose: this.onClose,
         visible: visible
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a, {
         layout: "vertical",
         hideRequiredMark: true,
         onSubmit: function onSubmit(e) {
           return _this3.handleSubmit(e);
         }
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_5___default.a, {
         gutter: 16
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_spin__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_spin__WEBPACK_IMPORTED_MODULE_7___default.a, {
         spinning: loading
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_9___default.a, {
         span: 24
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_11___default.a.Item, {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a.Item, {
         label: "Problem"
       }, getFieldDecorator('problem', {
         rules: [{
           required: true,
           message: 'Please select at lease one problem'
         }]
-      })(react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_16___default.a, {
-        mode: "multiple",
-        size: "large",
+      })(react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(SelectWrapper, {
         onChange: this.onChange,
-        placeholder: "Please select at lease one problem"
-      }, problems.map(function (item, index) {
-        var v = "".concat(item.number, "-").concat(item.name);
-        return react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(Option, {
-          key: item.name,
-          value: v
-        }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement("span", null, v));
-      })))))))), react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement("div", {
+        problems: problems,
+        disableSelect: disableSelect
+      }))), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a.Item, {
+        label: "Pass or Fail"
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_switch__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        defaultChecked: true,
+        onChange: this.switchChange
+      })))))), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("div", {
         style: {
           position: 'absolute',
           left: 0,
@@ -745,12 +799,12 @@ function (_React$Component) {
           background: '#fff',
           textAlign: 'right'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
         onClick: this.onClose,
         style: {
           marginRight: 8
         }
-      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_17___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
         onClick: function onClick(e) {
           return _this3.handleSubmit(e);
         },
@@ -760,11 +814,40 @@ function (_React$Component) {
   }]);
 
   return AddRecordWrap;
-}(react__WEBPACK_IMPORTED_MODULE_17___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_19___default.a.Component);
 
+var SelectWrapper = Object(react__WEBPACK_IMPORTED_MODULE_19__["forwardRef"])(function (props, ref) {
+  if (!props.disableSelect) {
+    return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default.a, {
+      mode: "multiple",
+      size: "large",
+      onChange: props.onChange,
+      ref: ref,
+      placeholder: "Please select at lease one problem"
+    }, props.problems.map(function (item, index) {
+      var v = "".concat(item.number, "-").concat(item.name);
+      return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Option, {
+        key: item.name,
+        value: v
+      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("span", null, v));
+    }));
+  } else {
+    return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default.a, {
+      mode: "multiple",
+      size: "large",
+      ref: ref,
+      onChange: props.onChange,
+      placeholder: "Please select at lease one problem"
+    }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Option, {
+      key: "000",
+      value: "000",
+      disabled: true
+    }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("span", null, "You may at least select five problems!")));
+  }
+});
 var mapDispatchToProps = {
-  getRecords: _store__WEBPACK_IMPORTED_MODULE_21__["getRecords"],
-  getProblems: _store__WEBPACK_IMPORTED_MODULE_21__["getProblems"]
+  getRecords: _store__WEBPACK_IMPORTED_MODULE_23__["getRecords"],
+  getProblems: _store__WEBPACK_IMPORTED_MODULE_23__["getProblems"]
 };
 
 var mapStateToProps = function mapStateToProps(_ref3) {
@@ -774,7 +857,7 @@ var mapStateToProps = function mapStateToProps(_ref3) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_20__["connect"])(mapStateToProps, mapDispatchToProps)(antd_lib_form__WEBPACK_IMPORTED_MODULE_11___default.a.create()(AddRecordWrap)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_22__["connect"])(mapStateToProps, mapDispatchToProps)(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a.create()(AddRecordWrap)));
 
 /***/ }),
 
@@ -1133,12 +1216,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _common_css_constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../common/css/constant */ "./common/css/constant.js");
+
 
 
 var Bar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div.withConfig({
   displayName: "Footer__Bar",
   componentId: "sc-1714oml-0"
-})(["background:#6abb03;height:65px;line-height:65px;color:#fff;text-align:center;"]);
+})(["background:", ";height:65px;line-height:65px;color:#fff;text-align:center;"], _common_css_constant__WEBPACK_IMPORTED_MODULE_2__["themeColor"]);
 
 var Footer = function Footer() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Bar, null, "Copyright 2019 \xA9 code , All Rights Reserved"));
@@ -1179,6 +1264,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _common_css_constant__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../common/css/constant */ "./common/css/constant.js");
 
 
 
@@ -1211,10 +1297,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Bar = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "Header__Bar",
   componentId: "sc-1dlmmob-0"
-})(["background:transparent;position:fixed;top:0;color:#6abb03;height:50px;padding-top:8px;padding-left:10px;width:100%;transition:ease 0.5s;z-index:100;&.isDark{background:#0e1118;}&.light{background:transparent;color:#6abb03;}"]);
+})(["background:transparent;position:fixed;top:0;color:", ";height:50px;padding-top:8px;padding-left:10px;width:100%;transition:ease 0.5s;z-index:100;&.isDark{background:#0e1118;}&.light{background:transparent;color:", ";}"], _common_css_constant__WEBPACK_IMPORTED_MODULE_12__["themeColor"], _common_css_constant__WEBPACK_IMPORTED_MODULE_12__["themeColor"]);
 var Navi = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.li.withConfig({
   displayName: "Header__Navi",
   componentId: "sc-1dlmmob-1"
@@ -1814,6 +1901,28 @@ module.exports = require("antd/lib/spin");
 /***/ (function(module, exports) {
 
 module.exports = require("antd/lib/spin/style/css");
+
+/***/ }),
+
+/***/ "antd/lib/switch":
+/*!**********************************!*\
+  !*** external "antd/lib/switch" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/switch");
+
+/***/ }),
+
+/***/ "antd/lib/switch/style/css":
+/*!********************************************!*\
+  !*** external "antd/lib/switch/style/css" ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/switch/style/css");
 
 /***/ }),
 

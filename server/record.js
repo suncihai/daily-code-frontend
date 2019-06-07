@@ -1,5 +1,5 @@
 /**
- * 此模块写springboot范例的user的接口
+ * 此模块写springboot的record的接口
  */
 const { axiosServer } = require('./axiosServer')
 const {responseWrap, errorResponse} = require('./responseWrap')

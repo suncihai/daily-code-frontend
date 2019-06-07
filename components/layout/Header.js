@@ -9,12 +9,13 @@ import { logout } from '../../store'
 import cx from 'classname'
 import Cookies from 'js-cookie'
 import Router from 'next/router'
+import { themeColor } from '../../common/css/constant'
 
 const Bar = styled.div`
    background: transparent;
    position: fixed;
    top: 0;
-   color: #6abb03;
+   color: ${themeColor};
    height: 50px;
    padding-top: 8px;
    padding-left: 10px;
@@ -26,7 +27,7 @@ const Bar = styled.div`
    }
    &.light {
       background: transparent;
-      color: #6abb03;
+      color: ${themeColor};
    }
 `
 
