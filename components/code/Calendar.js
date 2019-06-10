@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { axiosClient } from '../../common/js/axios'
 import styled from 'styled-components'
-import { Calendar, Tooltip, Button, Form, Input, message, Spin } from 'antd'
+import { problemList } from '../../common/js/const'
+import { Calendar, Tooltip, Popover, Spin } from 'antd'
 import { connect } from 'react-redux'
 import { getRecords } from '../../store'
 import moment from 'moment'
@@ -71,6 +72,13 @@ const DateTd = styled.div`
    cursor: pointer;
 `
 
+const PopTable = styled.table`
+   tr td {
+      text-align: left;
+      padding: 0 5px;
+   }
+`
+
 class CalendarWrap extends React.Component {
    state = {
       loading: false,
@@ -94,8 +102,22 @@ class CalendarWrap extends React.Component {
       })
 
       if (ret.code === 0) {
-         this.props.getRecords(ret.data)
+         let data = ret.data
+         this.insertName(data.currMonthRecord)
+         this.insertName(data.lastMonthRecord)
+         this.insertName(data.prevMonthRecord)
+         this.props.getRecords(data)
       } 
+   }
+
+   insertName = (arr) => {
+      arr.map(list=>{
+         if(list.length>0) {
+            list.map(ele=>{
+               ele.name = problemList[ele.problem-1]
+            })
+         }
+      })
    }
 
    getListData = (value, arr, month) => {
@@ -103,7 +125,10 @@ class CalendarWrap extends React.Component {
      let cell
      if(month - value.month() == 1) {
        if(arr[date-1]) {
-          cell = {count: arr[date-1].length}
+          cell = {
+                   count: arr[date-1].length,
+                   problems: arr[date-1]
+                 }
        }
      }
      return cell
@@ -126,11 +151,44 @@ class CalendarWrap extends React.Component {
            text = `好棒！你这天刷了${cell.count}题！`
          }
 
-         return (
-            <Tooltip title={text}>
-               <DateTd className={cellStyle}>{value.date()}</DateTd>
-            </Tooltip>
-         )
+         if(cell.count > 0) {
+            const content = <PopTable>
+                               <tbody>
+                               {
+                                 cell.problems.map((ele, index)=>{
+                                    return (
+                                       <tr key={index}>
+                                          <td>{ele.problem}</td>
+                                          <td>{ele.name}</td> 
+                                       </tr>
+                                    )
+                                 })
+                              }
+                              </tbody>
+                           </PopTable>
+            
+            return (
+               <Popover 
+                  placement="bottom"
+                  trigger="click"
+                  theme="dark"
+                  content=
+                     {
+                        <div>{content}</div>
+                    }
+               > 
+                  <Tooltip title={text}>
+                     <DateTd className={cellStyle}>{value.date()}</DateTd>
+                  </Tooltip>
+               </Popover>
+            )
+         }else{
+            return (
+               <Tooltip title={text}>
+                  <DateTd className={cellStyle}>{value.date()}</DateTd>
+               </Tooltip>
+            )
+         }
       }else{
          return (
             <DateTd >{value.date()}</DateTd>
@@ -193,7 +251,7 @@ class CalendarWrap extends React.Component {
 }
 
 const mapDispatchToProps = { getRecords }
-const mapStateToProps = ({records}) => ({records})
+const mapStateToProps = ({records, problems}) => ({records, problems})
 
 export default connect(
    mapStateToProps,
