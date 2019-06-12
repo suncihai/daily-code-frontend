@@ -84,13 +84,13 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${themeColor};
   }
   .ant-popover-inner-content {
-    background-color: rgba(0,0,0,0.75);
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
+    color: ${themeColor};
   }
-  .ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow {
-    border-top-color: rgba(0,0,0,0.75);
-    border-left-color: rgba(0,0,0,0.75);
+  .ant-tooltip-inner {
+    background-color: #fff;
+    color: ${themeColor};
   }
-`
+  .ant-tooltip-placement-top .ant-tooltip-arrow {
+    border-top-color: #fff;
+  }
+ `

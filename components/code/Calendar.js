@@ -53,12 +53,12 @@ const CalendarBox = styled.div`
            }
            .case2 {
               border-radius: 5px; 
-              background: #287d20;
+              background: #6abb03;
               color: #fff;
            }
            .case3 {
             border-radius: 5px; 
-            background: #134f0d;
+            background: #287d20;
             color: #fff;
          }
         }
