@@ -217,6 +217,7 @@ class CalendarWrap extends React.Component {
                            );
                         }}/>
                   </CalendarBox>
+                  <div>{records.prevMonthCount}</div>
                   <CalendarBox>
                      <Calendar 
                         dateFullCellRender={(value)=>this.dateFullCellRender(value,records.lastMonthRecord,moment().subtract(1, 'months').startOf('month').format('M'))} 
@@ -230,6 +231,7 @@ class CalendarWrap extends React.Component {
                         );
                         }}/>
                   </CalendarBox>
+                  <div>{records.lastMonthCount}</div>
                   <CalendarBox>
                      <Calendar
                         dateFullCellRender={(value)=>this.dateFullCellRender(value,records.currMonthRecord,moment().subtract(0, 'months').startOf('month').format('M'))}  
@@ -242,6 +244,7 @@ class CalendarWrap extends React.Component {
                         );
                         }}/>
                   </CalendarBox>
+                  <div>{records.currMonthCount}</div>
                </CalendarRow>
             </Spin>
             <AddRecord updateRecords={this.fetchRecords}/>

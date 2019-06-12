@@ -1081,7 +1081,7 @@ function (_React$Component) {
             className: "month"
           }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_15___default()().subtract(2, 'months').startOf('month').format('MMM')));
         }
-      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, records.prevMonthCount), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
         dateFullCellRender: function dateFullCellRender(value) {
           return _this2.dateFullCellRender(value, records.lastMonthRecord, moment__WEBPACK_IMPORTED_MODULE_15___default()().subtract(1, 'months').startOf('month').format('M'));
         },
@@ -1092,7 +1092,7 @@ function (_React$Component) {
             className: "month"
           }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_15___default()().subtract(1, 'months').startOf('month').format('MMM')));
         }
-      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, records.lastMonthCount), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(CalendarBox, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_calendar__WEBPACK_IMPORTED_MODULE_3___default.a, {
         dateFullCellRender: function dateFullCellRender(value) {
           return _this2.dateFullCellRender(value, records.currMonthRecord, moment__WEBPACK_IMPORTED_MODULE_15___default()().subtract(0, 'months').startOf('month').format('M'));
         },
@@ -1102,7 +1102,7 @@ function (_React$Component) {
             className: "month"
           }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, moment__WEBPACK_IMPORTED_MODULE_15___default()().format("MMM")));
         }
-      })))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_AddRecord__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      })), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, records.currMonthCount))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_AddRecord__WEBPACK_IMPORTED_MODULE_17__["default"], {
         updateRecords: this.fetchRecords
       }));
     }
