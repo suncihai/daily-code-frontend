@@ -93,6 +93,28 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/img/java.png":
+/*!*****************************!*\
+  !*** ./assets/img/java.png ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/files/java_b445a81eeba2b76be7867b1d265a789a.png";
+
+/***/ }),
+
+/***/ "./assets/img/javascript.png":
+/*!***********************************!*\
+  !*** ./assets/img/javascript.png ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/files/javascript_1250263643f239ebcd7c7e410621d7e1.png";
+
+/***/ }),
+
 /***/ "./assets/img/logo.png":
 /*!*****************************!*\
   !*** ./assets/img/logo.png ***!
@@ -940,6 +962,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! classname */ "classname");
 /* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_16__);
 /* harmony import */ var _AddRecord__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./AddRecord */ "./components/code/AddRecord.js");
+/* harmony import */ var _assets_img_java_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../assets/img/java.png */ "./assets/img/java.png");
+/* harmony import */ var _assets_img_java_png__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_assets_img_java_png__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var _assets_img_javascript_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../assets/img/javascript.png */ "./assets/img/javascript.png");
+/* harmony import */ var _assets_img_javascript_png__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_assets_img_javascript_png__WEBPACK_IMPORTED_MODULE_19__);
 
 
 
@@ -983,6 +1009,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
 var Body = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withConfig({
   displayName: "Calendar__Body",
   componentId: "sc-1mq0gob-0"
@@ -1002,7 +1030,7 @@ var DateTd = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.div.withC
 var PopTable = styled_components__WEBPACK_IMPORTED_MODULE_11___default.a.table.withConfig({
   displayName: "Calendar__PopTable",
   componentId: "sc-1mq0gob-4"
-})(["tr td{text-align:left;padding:0 5px;}"]);
+})(["tr td{text-align:left;padding:0 5px;img{height:24px;}}"]);
 
 var CalendarWrap =
 /*#__PURE__*/
@@ -1119,12 +1147,21 @@ function (_React$Component) {
           var content = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(PopTable, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("tbody", null, cell.problems.map(function (ele, index) {
             return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("tr", {
               key: index
-            }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("td", null, ele.problem), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("td", null, ele.name));
+            }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("td", null, ele.problem), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("td", null, ele.name), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("td", null, function () {
+              if (ele.language === 'java') {
+                return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+                  src: _assets_img_java_png__WEBPACK_IMPORTED_MODULE_18___default.a
+                });
+              } else {
+                return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("img", {
+                  src: _assets_img_javascript_png__WEBPACK_IMPORTED_MODULE_19___default.a
+                });
+              }
+            }()));
           })));
           return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_popover__WEBPACK_IMPORTED_MODULE_5___default.a, {
             placement: "bottom",
             trigger: "click",
-            theme: "dark",
             content: react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", null, content)
           }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(antd_lib_tooltip__WEBPACK_IMPORTED_MODULE_7___default.a, {
             title: text

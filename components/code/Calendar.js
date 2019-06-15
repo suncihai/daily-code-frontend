@@ -9,6 +9,8 @@ import { getRecords } from '../../store'
 import moment from 'moment'
 import cx from 'classname'
 import AddRecord from './AddRecord'
+import javaicon from '../../assets/img/java.png'
+import javascripticon from '../../assets/img/javascript.png'
 
 const Body = styled.div`
    min-height: 87vh;
@@ -76,6 +78,9 @@ const PopTable = styled.table`
    tr td {
       text-align: left;
       padding: 0 5px;
+      img {
+         height: 24px;
+      }
    }
 `
 
@@ -159,7 +164,22 @@ class CalendarWrap extends React.Component {
                                     return (
                                        <tr key={index}>
                                           <td>{ele.problem}</td>
-                                          <td>{ele.name}</td> 
+                                          <td>{ele.name}</td>
+                                          <td>
+                                               {
+                                                  (()=>{
+                                                     if(ele.language === 'java') {
+                                                         return (
+                                                            <img src={javaicon} />
+                                                         )
+                                                     }else {
+                                                        return (
+                                                           <img src={javascripticon} />
+                                                        )
+                                                     }
+                                                  })()
+                                               }
+                                          </td> 
                                        </tr>
                                     )
                                  })
@@ -171,7 +191,6 @@ class CalendarWrap extends React.Component {
                <Popover 
                   placement="bottom"
                   trigger="click"
-                  theme="dark"
                   content=
                      {
                         <div>{content}</div>
