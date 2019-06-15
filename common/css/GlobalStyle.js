@@ -93,4 +93,10 @@ export const GlobalStyle = createGlobalStyle`
   .ant-tooltip-placement-top .ant-tooltip-arrow {
     border-top-color: #fff;
   }
+  .ant-radio-checked .ant-radio-inner {
+    border-color: ${themeColor};
+  }
+  .ant-radio-inner::after {
+    background-color: ${themeColor};
+  }
  `

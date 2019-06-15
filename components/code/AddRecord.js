@@ -2,7 +2,7 @@
 import React, { Component, forwardRef } from 'react';
 import { axiosClient } from '../../common/js/axios'
 import styled from 'styled-components'
-import { Drawer, Tooltip, Button, Form, Input, Switch, Row, Col, Select, message, Spin } from 'antd'
+import { Drawer, Tooltip, Button, Form, Radio, Switch, Row, Col, Select, message, Spin } from 'antd'
 import { connect } from 'react-redux'
 import { getRecords, getProblems } from '../../store'
 import iconGreen from '../../assets/img/submit_green.png'
@@ -43,6 +43,7 @@ class AddRecordWrap extends React.Component {
       visible: false,
       disableSelect: false, 
       switchCheck: true,
+      language:'javascript',
       selectedPro: '',
    }
 
@@ -79,6 +80,7 @@ class AddRecordWrap extends React.Component {
          username: 'suncihai@gmail.com',
          problems: this.state.selectedPro,
          timestamp,
+         language: this.state.language,
          success: this.state.switchCheck,
       }
       const ret = await axiosClient({
@@ -119,6 +121,12 @@ class AddRecordWrap extends React.Component {
       }
    }
 
+   radioChange = e => {
+      this.setState({
+        language: e.target.value,
+      });
+    };
+
    switchChange = (checked) => {
       this.setState({switchCheck: checked})
    }
@@ -134,7 +142,7 @@ class AddRecordWrap extends React.Component {
     };
    
    render() {
-      const { loading, hover, visible, disableSelect, switchCheck } = this.state
+      const { loading, hover, visible, disableSelect, switchCheck, language } = this.state
       const icon = hover ? iconWhite : iconGreen
       const iconStyle = cx({
          'hover-icon': hover
@@ -171,6 +179,12 @@ class AddRecordWrap extends React.Component {
                            </Form.Item>
                            <Form.Item label="Pass or Fail">
                               <Switch defaultChecked onChange={this.switchChange} />
+                           </Form.Item>
+                           <Form.Item label="Language">
+                              <Radio.Group onChange={this.radioChange} value={language}>
+                                 <Radio value="javascript">Javascript</Radio>
+                                 <Radio value="java">Java</Radio>
+                              </Radio.Group>
                            </Form.Item>
                         </Col>
                      </Spin>

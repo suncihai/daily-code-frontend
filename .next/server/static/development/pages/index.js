@@ -468,41 +468,47 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! antd/lib/col */ "antd/lib/col");
 /* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd/lib/switch/style/css */ "antd/lib/switch/style/css");
-/* harmony import */ var antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var antd_lib_switch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd/lib/switch */ "antd/lib/switch");
-/* harmony import */ var antd_lib_switch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(antd_lib_switch__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd/lib/form/style/css */ "antd/lib/form/style/css");
-/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd/lib/form */ "antd/lib/form");
-/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd/lib/message/style/css */ "antd/lib/message/style/css");
-/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd/lib/message */ "antd/lib/message");
-/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! antd/lib/select/style/css */ "antd/lib/select/style/css");
-/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_17__);
-/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! antd/lib/select */ "antd/lib/select");
-/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select__WEBPACK_IMPORTED_MODULE_18__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _common_js_axios__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../common/js/axios */ "./common/js/axios.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_21__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../../store */ "./store.js");
-/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../../assets/img/submit_green.png */ "./assets/img/submit_green.png");
-/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../assets/img/submit_white.png */ "./assets/img/submit_white.png");
-/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! moment */ "moment");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_26__);
-/* harmony import */ var _common_css_constant__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../common/css/constant */ "./common/css/constant.js");
-/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! classname */ "classname");
-/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var antd_lib_radio_style_css__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! antd/lib/radio/style/css */ "antd/lib/radio/style/css");
+/* harmony import */ var antd_lib_radio_style_css__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(antd_lib_radio_style_css__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var antd_lib_radio__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! antd/lib/radio */ "antd/lib/radio");
+/* harmony import */ var antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! antd/lib/switch/style/css */ "antd/lib/switch/style/css");
+/* harmony import */ var antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(antd_lib_switch_style_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var antd_lib_switch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! antd/lib/switch */ "antd/lib/switch");
+/* harmony import */ var antd_lib_switch__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(antd_lib_switch__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! antd/lib/form/style/css */ "antd/lib/form/style/css");
+/* harmony import */ var antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form_style_css__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! antd/lib/form */ "antd/lib/form");
+/* harmony import */ var antd_lib_form__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(antd_lib_form__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! antd/lib/message/style/css */ "antd/lib/message/style/css");
+/* harmony import */ var antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message_style_css__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! antd/lib/message */ "antd/lib/message");
+/* harmony import */ var antd_lib_message__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(antd_lib_message__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @babel/runtime/regenerator */ "@babel/runtime/regenerator");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! antd/lib/select/style/css */ "antd/lib/select/style/css");
+/* harmony import */ var antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select_style_css__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! antd/lib/select */ "antd/lib/select");
+/* harmony import */ var antd_lib_select__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(antd_lib_select__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _common_js_axios__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../common/js/axios */ "./common/js/axios.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_24__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../../store */ "./store.js");
+/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../../assets/img/submit_green.png */ "./assets/img/submit_green.png");
+/* harmony import */ var _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_26__);
+/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../../assets/img/submit_white.png */ "./assets/img/submit_white.png");
+/* harmony import */ var _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_27__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! moment */ "moment");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_28__);
+/* harmony import */ var _common_css_constant__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../../common/css/constant */ "./common/css/constant.js");
+/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! classname */ "classname");
+/* harmony import */ var classname__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(classname__WEBPACK_IMPORTED_MODULE_30__);
+
+
 
 
 
@@ -557,15 +563,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var Body = styled_components__WEBPACK_IMPORTED_MODULE_21___default.a.div.withConfig({
+var Body = styled_components__WEBPACK_IMPORTED_MODULE_23___default.a.div.withConfig({
   displayName: "AddRecord__Body",
   componentId: "sc-1hr4qll-0"
 })([""]);
-var Icon = styled_components__WEBPACK_IMPORTED_MODULE_21___default.a.div.withConfig({
+var Icon = styled_components__WEBPACK_IMPORTED_MODULE_23___default.a.div.withConfig({
   displayName: "AddRecord__Icon",
   componentId: "sc-1hr4qll-1"
-})(["position:fixed;right:25px;transform:translateY(-80%);top:20%;padding:10px;border-radius:40px;border:2px solid ", ";cursor:pointer;transition:background 0.4s ease-in-out;.record-icon{width:30px;transition:all 0.4s ease-in-out;}&.hover-icon{background:", ";}"], _common_css_constant__WEBPACK_IMPORTED_MODULE_27__["themeColor"], _common_css_constant__WEBPACK_IMPORTED_MODULE_27__["themeColor"]);
-var Option = antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default.a.Option;
+})(["position:fixed;right:25px;transform:translateY(-80%);top:20%;padding:10px;border-radius:40px;border:2px solid ", ";cursor:pointer;transition:background 0.4s ease-in-out;.record-icon{width:30px;transition:all 0.4s ease-in-out;}&.hover-icon{background:", ";}"], _common_css_constant__WEBPACK_IMPORTED_MODULE_29__["themeColor"], _common_css_constant__WEBPACK_IMPORTED_MODULE_29__["themeColor"]);
+var Option = antd_lib_select__WEBPACK_IMPORTED_MODULE_20___default.a.Option;
 
 var AddRecordWrap =
 /*#__PURE__*/
@@ -591,6 +597,7 @@ function (_React$Component) {
       visible: false,
       disableSelect: false,
       switchCheck: true,
+      language: 'javascript',
       selectedPro: ''
     });
 
@@ -598,14 +605,14 @@ function (_React$Component) {
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.mark(function _callee() {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18___default.a.mark(function _callee() {
       var ret;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.wrap(function _callee$(_context) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18___default.a.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_20__["axiosClient"])({
+              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_22__["axiosClient"])({
                 method: 'GET',
                 url: '/api/get_problems'
               });
@@ -629,9 +636,9 @@ function (_React$Component) {
     /*#__PURE__*/
     _asyncToGenerator(
     /*#__PURE__*/
-    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.mark(function _callee2() {
+    _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18___default.a.mark(function _callee2() {
       var timestamp, params, ret;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_16___default.a.wrap(function _callee2$(_context2) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_18___default.a.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
@@ -640,10 +647,11 @@ function (_React$Component) {
                 username: 'suncihai@gmail.com',
                 problems: _this.state.selectedPro,
                 timestamp: timestamp,
+                language: _this.state.language,
                 success: _this.state.switchCheck
               };
               _context2.next = 4;
-              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_20__["axiosClient"])({
+              return Object(_common_js_axios__WEBPACK_IMPORTED_MODULE_22__["axiosClient"])({
                 method: 'GET',
                 url: '/api/submit_record',
                 params: params
@@ -659,7 +667,7 @@ function (_React$Component) {
                     visible: false
                   });
 
-                  antd_lib_message__WEBPACK_IMPORTED_MODULE_15___default.a.success('添加刷题记录成功！');
+                  antd_lib_message__WEBPACK_IMPORTED_MODULE_17___default.a.success('添加刷题记录成功！');
 
                   _this.props.updateRecords();
                 }, 1000);
@@ -692,6 +700,12 @@ function (_React$Component) {
           disableSelect: true
         });
       }
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "radioChange", function (e) {
+      _this.setState({
+        language: e.target.value
+      });
     });
 
     _defineProperty(_assertThisInitialized(_this), "switchChange", function (checked) {
@@ -746,16 +760,17 @@ function (_React$Component) {
           hover = _this$state.hover,
           visible = _this$state.visible,
           disableSelect = _this$state.disableSelect,
-          switchCheck = _this$state.switchCheck;
-      var icon = hover ? _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_25___default.a : _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_24___default.a;
-      var iconStyle = classname__WEBPACK_IMPORTED_MODULE_28___default()({
+          switchCheck = _this$state.switchCheck,
+          language = _this$state.language;
+      var icon = hover ? _assets_img_submit_white_png__WEBPACK_IMPORTED_MODULE_27___default.a : _assets_img_submit_green_png__WEBPACK_IMPORTED_MODULE_26___default.a;
+      var iconStyle = classname__WEBPACK_IMPORTED_MODULE_30___default()({
         'hover-icon': hover
       });
       var getFieldDecorator = this.props.form.getFieldDecorator;
       var problems = this.props.problems;
-      return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Body, null, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Icon, {
+      return react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(Body, null, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(Icon, {
         className: iconStyle
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement("img", {
         className: "record-icon",
         onMouseOver: function onMouseOver() {
           _this3.setState({
@@ -769,40 +784,49 @@ function (_React$Component) {
         },
         onClick: this.showDrawer,
         src: icon
-      })), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      })), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_drawer__WEBPACK_IMPORTED_MODULE_1___default.a, {
         title: "Create a new record",
         width: 450,
         onClose: this.onClose,
         visible: visible
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_15___default.a, {
         layout: "vertical",
         hideRequiredMark: true,
         onSubmit: function onSubmit(e) {
           return _this3.handleSubmit(e);
         }
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_row__WEBPACK_IMPORTED_MODULE_5___default.a, {
         gutter: 16
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_spin__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_spin__WEBPACK_IMPORTED_MODULE_7___default.a, {
         spinning: loading
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_9___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_col__WEBPACK_IMPORTED_MODULE_9___default.a, {
         span: 24
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a.Item, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_15___default.a.Item, {
         label: "Problem"
       }, getFieldDecorator('problem', {
         rules: [{
           required: true,
           message: 'Please select at lease one problem'
         }]
-      })(react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(SelectWrapper, {
+      })(react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(SelectWrapper, {
         onChange: this.onChange,
         problems: problems,
         disableSelect: disableSelect
-      }))), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a.Item, {
+      }))), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_15___default.a.Item, {
         label: "Pass or Fail"
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_switch__WEBPACK_IMPORTED_MODULE_11___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_switch__WEBPACK_IMPORTED_MODULE_13___default.a, {
         defaultChecked: true,
         onChange: this.switchChange
-      })))))), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_form__WEBPACK_IMPORTED_MODULE_15___default.a.Item, {
+        label: "Language"
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default.a.Group, {
+        onChange: this.radioChange,
+        value: language
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        value: "javascript"
+      }, "Javascript"), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        value: "java"
+      }, "Java"))))))), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement("div", {
         style: {
           position: 'absolute',
           left: 0,
@@ -813,12 +837,12 @@ function (_React$Component) {
           background: '#fff',
           textAlign: 'right'
         }
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
         onClick: this.onClose,
         style: {
           marginRight: 8
         }
-      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_3___default.a, {
         onClick: function onClick(e) {
           return _this3.handleSubmit(e);
         },
@@ -828,11 +852,11 @@ function (_React$Component) {
   }]);
 
   return AddRecordWrap;
-}(react__WEBPACK_IMPORTED_MODULE_19___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_21___default.a.Component);
 
-var SelectWrapper = Object(react__WEBPACK_IMPORTED_MODULE_19__["forwardRef"])(function (props, ref) {
+var SelectWrapper = Object(react__WEBPACK_IMPORTED_MODULE_21__["forwardRef"])(function (props, ref) {
   if (!props.disableSelect) {
-    return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default.a, {
+    return react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_20___default.a, {
       mode: "multiple",
       size: "large",
       onChange: props.onChange,
@@ -840,28 +864,28 @@ var SelectWrapper = Object(react__WEBPACK_IMPORTED_MODULE_19__["forwardRef"])(fu
       placeholder: "Please select at lease one problem"
     }, props.problems.map(function (item, index) {
       var v = "".concat(item.number, "-").concat(item.name);
-      return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Option, {
+      return react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(Option, {
         key: item.name,
         value: v
-      }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("span", null, v));
+      }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement("span", null, v));
     }));
   } else {
-    return react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_18___default.a, {
+    return react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_select__WEBPACK_IMPORTED_MODULE_20___default.a, {
       mode: "multiple",
       size: "large",
       ref: ref,
       onChange: props.onChange,
       placeholder: "Please select at lease one problem"
-    }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement(Option, {
+    }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(Option, {
       key: "000",
       value: "000",
       disabled: true
-    }, react__WEBPACK_IMPORTED_MODULE_19___default.a.createElement("span", null, "You may at least select five problems!")));
+    }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement("span", null, "You may at least select five problems!")));
   }
 });
 var mapDispatchToProps = {
-  getRecords: _store__WEBPACK_IMPORTED_MODULE_23__["getRecords"],
-  getProblems: _store__WEBPACK_IMPORTED_MODULE_23__["getProblems"]
+  getRecords: _store__WEBPACK_IMPORTED_MODULE_25__["getRecords"],
+  getProblems: _store__WEBPACK_IMPORTED_MODULE_25__["getProblems"]
 };
 
 var mapStateToProps = function mapStateToProps(_ref3) {
@@ -871,7 +895,7 @@ var mapStateToProps = function mapStateToProps(_ref3) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_22__["connect"])(mapStateToProps, mapDispatchToProps)(antd_lib_form__WEBPACK_IMPORTED_MODULE_13___default.a.create()(AddRecordWrap)));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_24__["connect"])(mapStateToProps, mapDispatchToProps)(antd_lib_form__WEBPACK_IMPORTED_MODULE_15___default.a.create()(AddRecordWrap)));
 
 /***/ }),
 
@@ -1922,6 +1946,28 @@ module.exports = require("antd/lib/popover");
 /***/ (function(module, exports) {
 
 module.exports = require("antd/lib/popover/style/css");
+
+/***/ }),
+
+/***/ "antd/lib/radio":
+/*!*********************************!*\
+  !*** external "antd/lib/radio" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/radio");
+
+/***/ }),
+
+/***/ "antd/lib/radio/style/css":
+/*!*******************************************!*\
+  !*** external "antd/lib/radio/style/css" ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/radio/style/css");
 
 /***/ }),
 
