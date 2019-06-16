@@ -11,6 +11,7 @@ import cx from 'classname'
 import AddRecord from './AddRecord'
 import javaicon from '../../assets/img/java.png'
 import javascripticon from '../../assets/img/javascript.png'
+import { themeColor } from '../../common/css/constant';
 
 const Body = styled.div`
    min-height: 87vh;
@@ -44,7 +45,16 @@ const CalendarBox = styled.div`
    .month {
       padding: 10px;
       text-align: center;
-      
+      position: relative;
+      .records {
+         position: absolute;
+         right: 10px;
+         top: 5px;
+         color: #fff;
+         background: ${themeColor};
+         padding: 5px;
+         border-radius:50px;
+      }
    }
    table {
       tr {
@@ -232,11 +242,11 @@ class CalendarWrap extends React.Component {
                            return (
                            <div className="month">
                               <div>{moment().subtract(2, 'months').startOf('month').format('MMM')}</div>
+                              <div className="records">{records.prevMonthCount}</div>
                            </div>
                            );
                         }}/>
                   </CalendarBox>
-                  <div>{records.prevMonthCount}</div>
                   <CalendarBox>
                      <Calendar 
                         dateFullCellRender={(value)=>this.dateFullCellRender(value,records.lastMonthRecord,moment().subtract(1, 'months').startOf('month').format('M'))} 
@@ -246,11 +256,11 @@ class CalendarWrap extends React.Component {
                         return (
                            <div className="month">
                               <div>{moment().subtract(1, 'months').startOf('month').format('MMM')}</div>
+                              <div className="records">{records.lastMonthCount}</div>
                            </div>
                         );
                         }}/>
                   </CalendarBox>
-                  <div>{records.lastMonthCount}</div>
                   <CalendarBox>
                      <Calendar
                         dateFullCellRender={(value)=>this.dateFullCellRender(value,records.currMonthRecord,moment().subtract(0, 'months').startOf('month').format('M'))}  
@@ -259,11 +269,11 @@ class CalendarWrap extends React.Component {
                         return (
                            <div className="month">
                               <div>{moment().format("MMM")}</div>
+                              <div className="records">{records.currMonthCount}</div>
                            </div>
                         );
                         }}/>
                   </CalendarBox>
-                  <div>{records.currMonthCount}</div>
                </CalendarRow>
             </Spin>
             <AddRecord updateRecords={this.fetchRecords}/>
