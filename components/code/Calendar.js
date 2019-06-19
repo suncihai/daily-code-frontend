@@ -11,6 +11,8 @@ import cx from 'classname'
 import AddRecord from './AddRecord'
 import javaicon from '../../assets/img/java.png'
 import javascripticon from '../../assets/img/javascript.png'
+import javafailicon from '../../assets/img/java_fail.png'
+import javascriptfailicon from '../../assets/img/javascript_fail.png'
 import { themeColor } from '../../common/css/constant';
 
 const Body = styled.div`
@@ -134,6 +136,9 @@ const PopTable = styled.table`
          height: 24px;
       }
    }
+   tr.fail {
+      color: #fd9700;
+   }
 `
 
 class CalendarWrap extends React.Component {
@@ -214,20 +219,32 @@ class CalendarWrap extends React.Component {
                                {
                                  cell.problems.map((ele, index)=>{
                                     return (
-                                       <tr key={index}>
+                                       <tr className={cx({'fail':ele.success == false})} key={index}>
                                           <td>{ele.problem}</td>
                                           <td>{ele.name}</td>
                                           <td>
                                                {
                                                   (()=>{
                                                      if(ele.language === 'java') {
-                                                         return (
-                                                            <img src={javaicon} />
-                                                         )
+                                                        if(ele.success === false) {
+                                                          return (
+                                                             <img src={javafailicon} />
+                                                          )
+                                                        } else {
+                                                          return (
+                                                             <img src={javaicon} />
+                                                          )
+                                                        }
                                                      }else {
-                                                        return (
-                                                           <img src={javascripticon} />
-                                                        )
+                                                        if(ele.success == false) {
+                                                          return (
+                                                             <img src={javascriptfailicon} />
+                                                          )
+                                                        } else {
+                                                           return (
+                                                              <img src={javascripticon} />
+                                                           )
+                                                        }
                                                      }
                                                   })()
                                                }
