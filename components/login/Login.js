@@ -48,7 +48,7 @@ class Login extends React.Component {
         setTimeout(()=>{
           this.setState({loading: false})
           message.success(`Welcomse back ${params.username}!`)
-          Cookies.set('testUserName', params.username, {expires:1})
+          Cookies.set('testUserName', params.username, {expires:7})
           Router.replace('/')
         },800)
      } else if (ret.cde === -7){
