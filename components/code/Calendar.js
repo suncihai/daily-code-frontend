@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { axiosClient } from '../../common/js/axios'
 import styled from 'styled-components'
 import { problemList } from '../../common/js/const'
-import { Calendar, Tooltip, Popover, Spin } from 'antd'
+import { Calendar, Tooltip, Popover, Spin, Button } from 'antd'
 import { connect } from 'react-redux'
 import { getRecords } from '../../store'
 import moment from 'moment'
@@ -21,9 +21,19 @@ const Body = styled.div`
    margin: 0 auto;
 `
 
+const MonthRow = styled.div`
+   width: 1200px;
+   margin: 0 auto;
+   text-align: left;
+   margin-bottom: 20px;
+   .prev {
+      margin-right: 15px;
+   }
+`
+
 const CalendarRow = styled.div`
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    width: 1200px;
    margin: 0 auto;
 `
@@ -144,17 +154,31 @@ const PopTable = styled.table`
 class CalendarWrap extends React.Component {
    state = {
       loading: false,
+      page: 1,
    }
 
    componentDidMount() {
      this.fetchRecords()
    }
 
+   prevPage() {
+      this.setState({page: this.state.page+1},()=>{
+          this.fetchRecords();
+      });
+   }
+
+   nextPage() {
+      this.setState({page: this.state.page-1},()=>{
+         this.fetchRecords();
+      });
+   }
+
    fetchRecords = async () => {
       const timestamp = new Date().getTime();
 
       const params = {
-         username: 'suncihai@gmail.com'
+         username: 'suncihai@gmail.com',
+         page: this.state.page,
       }
 
       const ret = await axiosClient({
@@ -285,12 +309,20 @@ class CalendarWrap extends React.Component {
    }
    
    render() {
-      const { loading } = this.state
+      const { loading, page } = this.state
       const { records } = this.props
 
       return ( 
          <Body>
             <Spin spinning={loading}>
+               <MonthRow>
+                  <Button className="prev" onClick={(e)=>this.prevPage(e)} type="primary">
+                     Prev
+                  </Button>
+                  <Button onClick={(e)=>this.nextPage(e)} type="primary">
+                     Next
+                  </Button>
+               </MonthRow>
                <CalendarRow>
                   <CalendarBox>
                      <Calendar 
@@ -300,7 +332,7 @@ class CalendarWrap extends React.Component {
                         headerRender={() => {
                            return (
                            <div className="month">
-                              <div>{moment().subtract(2, 'months').startOf('month').format('MMM')}</div>
+                              <div>{moment().subtract(2+3*(page-1), 'months').startOf('month').format('MMM')}</div>
                               <div className="records">{records.prevMonthCount}</div>
                            </div>
                            );
@@ -314,7 +346,7 @@ class CalendarWrap extends React.Component {
                         headerRender={() => {
                         return (
                            <div className="month">
-                              <div>{moment().subtract(1, 'months').startOf('month').format('MMM')}</div>
+                              <div>{moment().subtract(1+3*(page-1), 'months').startOf('month').format('MMM')}</div>
                               <div className="records">{records.lastMonthCount}</div>
                            </div>
                         );
@@ -327,7 +359,7 @@ class CalendarWrap extends React.Component {
                         headerRender={() => {
                         return (
                            <div className="month">
-                              <div>{moment().format("MMM")}</div>
+                              <div>{moment().subtract(0+3*(page-1), 'months').startOf('month').format('MMM')}</div>
                               <div className="records">{records.currMonthCount}</div>
                            </div>
                         );
