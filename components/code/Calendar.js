@@ -71,6 +71,7 @@ const CalendarBox = styled.div`
    table {
       tr {
         td {
+           padding: 2px;
            .case1 {
               border-radius: 5px; 
               background: #cce28c;
@@ -287,7 +288,7 @@ class CalendarWrap extends React.Component {
                   content=
                      {
                         <div>{content}</div>
-                    }
+                     }
                > 
                   <Tooltip title={text}>
                      <DateTd className={cellStyle}>{value.date()}</DateTd>
