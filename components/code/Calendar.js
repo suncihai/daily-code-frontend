@@ -224,9 +224,9 @@ class CalendarWrap extends React.Component {
     const cell = this.getListData(value, arr, month);
     if (cell) {
       let cellStyle = cx({
-        case1: cell.count >= 1 && cell.count <= 2,
-        case2: cell.count >= 3 && cell.count <= 4,
-        case3: cell.count >= 5,
+        case1: cell.count >= 1 && cell.count <= 3,
+        case2: cell.count >= 4 && cell.count <= 7,
+        case3: cell.count >= 8,
       });
       let text;
       if (cell.count === 0) {
