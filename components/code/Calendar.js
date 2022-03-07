@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { axiosClient } from '../../common/js/axios';
 import styled from 'styled-components';
-import { problemList } from '../../common/js/const';
 import { Calendar, Tooltip, Popover, Spin, Button } from 'antd';
 import { connect } from 'react-redux';
 import { getRecords } from '../../store';
@@ -146,6 +145,17 @@ const PopTable = styled.table`
       height: 24px;
     }
   }
+  td {
+    &.easy {
+      color: #6abb03;
+    }
+    &.medium {
+      color: #ffb800;
+    }
+    &.hard {
+      color: #ff2d55;
+    }
+  }
   tr.fail {
     color: #fd9700;
   }
@@ -189,22 +199,22 @@ class CalendarWrap extends React.Component {
 
     if (ret.code === 0) {
       let data = ret.data;
-      this.insertName(data.currMonthRecord);
-      this.insertName(data.lastMonthRecord);
-      this.insertName(data.prevMonthRecord);
+      // this.insertName(data.currMonthRecord);
+      // this.insertName(data.lastMonthRecord);
+      // this.insertName(data.prevMonthRecord);
       this.props.getRecords(data);
     }
   };
 
-  insertName = (arr) => {
-    arr.map((list) => {
-      if (list.length > 0) {
-        list.map((ele) => {
-          ele.name = problemList[ele.problem - 1];
-        });
-      }
-    });
-  };
+  // insertName = (arr) => {
+  //   arr.map((list) => {
+  //     if (list.length > 0) {
+  //       list.map((ele) => {
+  //         ele.name = problemList[ele.problem - 1];
+  //       });
+  //     }
+  //   });
+  // };
 
   getListData = (value, arr, month) => {
     let date = value.date();
@@ -220,7 +230,7 @@ class CalendarWrap extends React.Component {
     return cell;
   };
 
-  dateFullCellRender = (value, arr, month) => {
+  dateFullCellRender = (value, arr, month, problems) => {
     const cell = this.getListData(value, arr, month);
     if (cell) {
       let cellStyle = cx({
@@ -242,14 +252,24 @@ class CalendarWrap extends React.Component {
           <PopTable>
             <tbody>
               {cell.problems.map((ele, index) => {
+                const cellProblem = problems.filter(
+                  (problem) => problem.number == ele.problem
+                )[0];
+                let problemStyle = cx({
+                  easy: cellProblem && cellProblem.difficulty == 'Easy',
+                  medium: cellProblem && cellProblem.difficulty == 'Medium',
+                  hard: cellProblem && cellProblem.difficulty == 'Hard',
+                });
                 return (
                   <tr
                     className={cx({ fail: ele.success == false })}
                     key={index}
                   >
-                    <td>{ele.problem}</td>
-                    <td>{ele.name}</td>
-                    <td>
+                    <td className={problemStyle}>{ele.problem}</td>
+                    <td className={problemStyle}>
+                      {cellProblem && cellProblem.name}
+                    </td>
+                    <td className={problemStyle}>
                       {(() => {
                         if (ele.language === 'java') {
                           if (ele.success === false) {
@@ -298,7 +318,7 @@ class CalendarWrap extends React.Component {
 
   render() {
     const { loading, page } = this.state;
-    const { records } = this.props;
+    const { records, problems } = this.props;
 
     return (
       <Body>
@@ -322,7 +342,8 @@ class CalendarWrap extends React.Component {
                   this.dateFullCellRender(
                     value,
                     records.prevMonthRecord,
-                    moment().subtract(2, 'months').startOf('month').format('M')
+                    moment().subtract(2, 'months').startOf('month').format('M'),
+                    problems
                   )
                 }
                 value={moment().subtract(2, 'months').startOf('month')}
@@ -348,7 +369,8 @@ class CalendarWrap extends React.Component {
                   this.dateFullCellRender(
                     value,
                     records.lastMonthRecord,
-                    moment().subtract(1, 'months').startOf('month').format('M')
+                    moment().subtract(1, 'months').startOf('month').format('M'),
+                    problems
                   )
                 }
                 value={moment().subtract(1, 'months').startOf('month')}
@@ -374,7 +396,8 @@ class CalendarWrap extends React.Component {
                   this.dateFullCellRender(
                     value,
                     records.currMonthRecord,
-                    moment().subtract(0, 'months').startOf('month').format('M')
+                    moment().subtract(0, 'months').startOf('month').format('M'),
+                    problems
                   )
                 }
                 fullscreen={false}
