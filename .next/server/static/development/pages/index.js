@@ -627,7 +627,7 @@ function (_React$Component) {
       visible: false,
       disableSelect: false,
       switchCheck: true,
-      language: 'javascript',
+      language: 'java',
       selectedPro: ''
     });
 
@@ -853,10 +853,10 @@ function (_React$Component) {
         onChange: this.radioChange,
         value: language
       }, react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default.a, {
-        value: "javascript"
-      }, "Javascript"), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default.a, {
         value: "java"
-      }, "Java"))))))), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement("div", {
+      }, "Java"), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement(antd_lib_radio__WEBPACK_IMPORTED_MODULE_11___default.a, {
+        value: "javascript"
+      }, "Javascript"))))))), react__WEBPACK_IMPORTED_MODULE_21___default.a.createElement("div", {
         style: {
           position: 'absolute',
           left: 0,

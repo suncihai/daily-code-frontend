@@ -52,7 +52,7 @@ class AddRecordWrap extends React.Component {
     visible: false,
     disableSelect: false,
     switchCheck: true,
-    language: 'javascript',
+    language: 'java',
     selectedPro: '',
   };
 
@@ -211,8 +211,8 @@ class AddRecordWrap extends React.Component {
                   </Form.Item>
                   <Form.Item label="Language">
                     <Radio.Group onChange={this.radioChange} value={language}>
-                      <Radio value="javascript">Javascript</Radio>
                       <Radio value="java">Java</Radio>
+                      <Radio value="javascript">Javascript</Radio>
                     </Radio.Group>
                   </Form.Item>
                 </Col>
