@@ -140,7 +140,7 @@ const DateTd = styled.div`
 const PopTable = styled.table`
   tr td {
     text-align: left;
-    padding: 0 5px;
+    padding: 2px 5px;
     img {
       height: 24px;
     }
@@ -154,6 +154,13 @@ const PopTable = styled.table`
     }
     &.hard {
       color: #ff2d55;
+    }
+    &.tag span {
+      padding: 4px !important;
+      background: #fafafa;
+      color: #546e7a;
+      border-radius: 6px;
+      margin: 2px 4px 2px 0;
     }
   }
   tr.fail {
@@ -269,7 +276,13 @@ class CalendarWrap extends React.Component {
                     <td className={problemStyle}>
                       {cellProblem && cellProblem.name}
                     </td>
-                    <td className={problemStyle}>
+                    <td className="tag">
+                      {cellProblem &&
+                        cellProblem.tag
+                          .split('-')
+                          .map((tag) => <span>{tag.toLowerCase()}</span>)}
+                    </td>
+                    {/* <td className={problemStyle}>
                       {(() => {
                         if (ele.language === 'java') {
                           if (ele.success === false) {
@@ -285,7 +298,7 @@ class CalendarWrap extends React.Component {
                           }
                         }
                       })()}
-                    </td>
+                    </td> */}
                   </tr>
                 );
               })}

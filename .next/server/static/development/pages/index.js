@@ -1054,7 +1054,7 @@ var DateTd = styled_components__WEBPACK_IMPORTED_MODULE_13___default.a.div.withC
 var PopTable = styled_components__WEBPACK_IMPORTED_MODULE_13___default.a.table.withConfig({
   displayName: "Calendar__PopTable",
   componentId: "sc-1mq0gob-5"
-})(["tr td{text-align:left;padding:0 5px;img{height:24px;}}td{&.easy{color:#6abb03;}&.medium{color:#ffb800;}&.hard{color:#ff2d55;}}tr.fail{color:#fd9700;}"]);
+})(["tr td{text-align:left;padding:2px 5px;img{height:24px;}}td{&.easy{color:#6abb03;}&.medium{color:#ffb800;}&.hard{color:#ff2d55;}&.tag span{padding:4px !important;background:#fafafa;color:#546e7a;border-radius:6px;margin:2px 4px 2px 0;}}tr.fail{color:#fd9700;}"]);
 
 var CalendarWrap =
 /*#__PURE__*/
@@ -1175,30 +1175,10 @@ function (_React$Component) {
             }, ele.problem), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("td", {
               className: problemStyle
             }, cellProblem && cellProblem.name), react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("td", {
-              className: problemStyle
-            }, function () {
-              if (ele.language === 'java') {
-                if (ele.success === false) {
-                  return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("img", {
-                    src: _assets_img_java_fail_png__WEBPACK_IMPORTED_MODULE_21___default.a
-                  });
-                } else {
-                  return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("img", {
-                    src: _assets_img_java_png__WEBPACK_IMPORTED_MODULE_19___default.a
-                  });
-                }
-              } else {
-                if (ele.success == false) {
-                  return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("img", {
-                    src: _assets_img_javascript_fail_png__WEBPACK_IMPORTED_MODULE_22___default.a
-                  });
-                } else {
-                  return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("img", {
-                    src: _assets_img_javascript_png__WEBPACK_IMPORTED_MODULE_20___default.a
-                  });
-                }
-              }
-            }()));
+              className: "tag"
+            }, cellProblem && cellProblem.tag.split('-').map(function (tag) {
+              return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement("span", null, tag.toLowerCase());
+            })));
           })));
           return react__WEBPACK_IMPORTED_MODULE_11___default.a.createElement(antd_lib_popover__WEBPACK_IMPORTED_MODULE_7___default.a, {
             placement: "bottom",
